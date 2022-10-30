@@ -40,7 +40,7 @@ def find_OOB_app(histogram, OOB_duration, percent_threshold):
 
 
 class Simulator:
-    def __init__(self,  workload_name, debug=False):
+    def __init__(self):
         """_summary_
 
         Args:
@@ -52,17 +52,9 @@ class Simulator:
         # {key: application id, value: [application object, list of invocations, load_time, last_finish_time, keep_live_until]}
         self.application_in_memory = {}
         self.max_memory = 0
-        self.workload = []
-        function_array = np.load(workload_name)
-        function_array = function_array.astype(object)
-        print("size of workload: ", function_array.shape[0])
-        for i in range(len(function_array)):
-            self.workload.append(Function(function_array[i][0], function_array[i][1], float(function_array[i][2]), function_array[i][3], float(function_array[i][4]), float(function_array[i][5])))
-        if debug:
-            # keeep 10 invocations only for debug
-            self.workload = self.workload[:10]
         self.wasted_memory_time = 0
         self.update_OOB_apps = False
+        self.workload = []
 
     def load_workload(self, day):
         function_array = np.load("day{}.npy".format(day))
@@ -135,38 +127,18 @@ class Simulator:
 
     def simulation_hybrid(self, verbose=True, file_start_time=0, histogram_collection_time=24*60*60, pattern_min_len=10, IT_behavior_change=0.5):
         start_time = time.time()
-<<<<<<< HEAD
         self.histogram_collection_time = histogram_collection_time
-        #print(self.histogram_collection_time) 86400
         self.pattern_min_len = pattern_min_len
         self.all_histograms = []
         self.current_histogram = {}
         self.histogram_id = 0
         OOB_apps_list = []
         self.scenario_stats = [0,0,0]
-
-        for i, invocation in enumerate(tqdm(self.workload)):
-            self.current_time = invocation.start_time
-            # check if the app has been load in memory and record memory waste time
-            self.check_alive_pre_warm(invocation.app_id)
-=======
+        
         for day in range(1, 3):
             print("loading workload of day {}".format(day))
             self.load_workload(day)
-            # function invocations already sorted during generation
-            # self.workload.sort(key=lambda x:x.start_time)
->>>>>>> 00706169d9eaaee6a7fa94e01dccc0f072e1aebd
-            if verbose:
-                print("first invocation start: ", self.workload[0].start_time)
-                print("last invocation start: ", self.workload[-1].start_time)
-            # collect histogram
-            self.histogram_collection_time = histogram_collection_time
-            self.pattern_min_len = pattern_min_len
-            self.all_histograms = []
-            self.current_histogram = {}
-            self.histogram_id = 0
-            OOB_apps_list = []
-            self.scenario_stats = [0,0,0]
+            self.workload.sort(key=lambda x:x.start_time)
 
             for i, invocation in enumerate(tqdm(self.workload)):
                 self.current_time = invocation.start_time
@@ -187,22 +159,6 @@ class Simulator:
                     self.update_OOB_apps = True
                     self.histogram_id += 1
                     self.all_histograms.append(self.current_histogram.copy())
-<<<<<<< HEAD
-
-            if invocation.app_id not in self.current_histogram.keys():
-                last_call_end_time = invocation.start_time + invocation.function_duration
-                idle_duration=[]
-                idle_end_time=[]
-                self.current_histogram[invocation.app_id] = [last_call_end_time, idle_duration, idle_end_time]
-            else:
-                if invocation.start_time > self.current_histogram[invocation.app_id][0]:
-                    idle_time = invocation.start_time - self.current_histogram[invocation.app_id][0]
-                    self.current_histogram[invocation.app_id][2].append(invocation.start_time)
-                    self.current_histogram[invocation.app_id][1].append(idle_time)
-                    if verbose:
-                        print('append a new idle time into current histogram: ', idle_time)
-                    self.current_histogram[invocation.app_id][0] = invocation.start_time + invocation.function_duration
-=======
                     for app_id in self.current_histogram.keys():
                         # keep the previous call end time and clear idle durations
                         self.current_histogram[app_id] = [self.current_histogram[app_id][0],[],[]]
@@ -211,13 +167,12 @@ class Simulator:
                     while self.current_time >= (self.histogram_id+1)*self.histogram_collection_time+file_start_time:
                         self.histogram_id += 1
                         self.all_histograms.append(self.current_histogram.copy())
-                                
+                        
                 if invocation.app_id not in self.current_histogram.keys():
                     last_call_end_time = invocation.start_time + invocation.function_duration
                     idle_duration=[]
                     idle_end_time=[]
                     self.current_histogram[invocation.app_id] = [last_call_end_time, idle_duration, idle_end_time]
->>>>>>> 00706169d9eaaee6a7fa94e01dccc0f072e1aebd
                 else:
                     if invocation.start_time > self.current_histogram[invocation.app_id][0]:
                         idle_time = invocation.start_time - self.current_histogram[invocation.app_id][0]
@@ -228,7 +183,7 @@ class Simulator:
                         self.current_histogram[invocation.app_id][0] = invocation.start_time + invocation.function_duration
                     else:
                         self.current_histogram[invocation.app_id][0] = max(self.current_histogram[invocation.app_id][0], invocation.start_time+invocation.function_duration)
-
+                    
                 if verbose:
                     print('all historical histograms: [')
                     for x in self.all_histograms:
@@ -237,15 +192,6 @@ class Simulator:
                     print('current historgram: ')
                     print('  ', self.current_histogram)
 
-<<<<<<< HEAD
-            # check the previous histogram OOB
-            if len(self.all_histograms)==0 or invocation.app_id not in self.all_histograms[-1].keys():
-                previous_histogram = []
-            else:
-                previous_histogram = self.all_histograms[-1][invocation.app_id][1] #idle time
-            if verbose:
-                print('func ', invocation.function_id,' previous histogram of ITs: ', previous_histogram)
-=======
                 # check the previous histogram OOB
                 if len(self.all_histograms)==0 or invocation.app_id not in self.all_histograms[-1].keys():
                     previous_histogram = []
@@ -253,7 +199,6 @@ class Simulator:
                     previous_histogram = self.all_histograms[-1][invocation.app_id][1]
                 if verbose:
                     print('func ', invocation.function_id,' previous histogram of ITs: ', previous_histogram)
->>>>>>> 00706169d9eaaee6a7fa94e01dccc0f072e1aebd
 
                 if self.update_OOB_apps:
                     OOB_apps_list = find_OOB_app(self.all_histograms[-1], OOB_duration=4*360, percent_threshold=0.25)
@@ -352,8 +297,8 @@ if __name__ == "__main__":
     #     Function(5, 1, 20, 'HTTP', 1, 1)
     # ]
 
-    simulator = Simulator('day1.npy')
-    simulator.simulation_hybrid(verbose=False)
+    simulator = Simulator()
+    simulator.simulation_hybrid(verbose=True)
     n = sum(simulator.scenario_stats)
 
     print("\n")
