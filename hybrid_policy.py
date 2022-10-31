@@ -125,7 +125,7 @@ class Simulator:
                     self.start_cold += 1
                     self.application_in_memory[invocation.app_id] = [invocation.app, invocation, invocation.start_time, invocation.end_time, pre_warm_time, keep_live_time]
 
-    def simulation_hybrid(self, verbose=True, total_days=6, histogram_collection_time=24*60*60, pattern_min_len=10, IT_behavior_change=0.5):
+    def simulation_hybrid(self, verbose=True, total_days=6, file_start_time=0, histogram_collection_time=24*60*60, pattern_min_len=10, IT_behavior_change=0.5):
         start_time = time.time()
         self.histogram_collection_time = histogram_collection_time
         self.pattern_min_len = pattern_min_len
@@ -141,7 +141,7 @@ class Simulator:
             self.workload.sort(key=lambda x:x.start_time)
 
             for i, invocation in enumerate(tqdm(self.workload)):
-                if invocation.start_time< day*24*60*60:
+                if invocation.start_time<(day-1)*24*60*60:
                     continue
                 self.current_time = invocation.start_time
                 # check if the app has been load in memory and record memory waste time
@@ -209,7 +209,7 @@ class Simulator:
                 pattern_represent = True
                 if len(previous_histogram)<self.pattern_min_len:
                     pattern_represent = False
-                    print(previous_histogram)
+                    # print(previous_histogram)
                 elif len(self.all_histograms)>1:
                     pre_previous_histogram = self.all_histograms[-2][invocation.app_id][1]
                     if len(pre_previous_histogram)>0:
@@ -302,7 +302,7 @@ if __name__ == "__main__":
     # ]
 
     simulator = Simulator()
-    simulator.simulation_hybrid(verbose=False)
+    simulator.simulation_hybrid(verbose=False,total_days=4)
     n = sum(simulator.scenario_stats)
 
     print("\n")
