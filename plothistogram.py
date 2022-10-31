@@ -1,3 +1,4 @@
+from pickle import TRUE
 from Application import Application
 from Function import Function
 
@@ -62,7 +63,7 @@ class Simulator:
         for i in range(len(function_array)):
             self.workload.append(Function(function_array[i][0], function_array[i][1], float(function_array[i][2]), function_array[i][3], float(function_array[i][4]), float(function_array[i][5])))
 
-    def plot_hybrid(self, verbose=True, file_start_time=0, histogram_collection_time=24*60*60, pattern_min_len=10, IT_behavior_change=0.5):
+    def plot_hybrid(self, verbose=True, total_days=6,file_start_time=0, histogram_collection_time=24*60*60, pattern_min_len=10, IT_behavior_change=0.5):
         start_time = time.time()
         self.histogram_collection_time = histogram_collection_time
         self.pattern_min_len = pattern_min_len
@@ -72,18 +73,25 @@ class Simulator:
         OOB_apps_list = []
         self.scenario_stats = [0,0,0]
         
-        for day in range(1, 3):
+        for day in range(1, total_days+1):
             print("loading workload of day {}".format(day))
             self.load_workload(day)
             self.workload.sort(key=lambda x:x.start_time)
 
             for i, invocation in enumerate(tqdm(self.workload)):
+                if invocation.start_time< (day-1)*24*60*60:
+                    continue
                 self.current_time = invocation.start_time
 
                 if self.current_time>=(self.histogram_id+1)*self.histogram_collection_time+file_start_time:
+                    print(self.current_time, (self.histogram_id+1)*self.histogram_collection_time+file_start_time)
                     self.update_OOB_apps = True
                     self.histogram_id += 1
+
+                    print('Y ', len(self.all_histograms))
                     self.all_histograms.append(self.current_histogram.copy())
+                    print('X ', len(self.all_histograms))
+
                     for app_id in self.current_histogram.keys():
                         # keep the previous call end time and clear idle durations
                         self.current_histogram[app_id] = [self.current_histogram[app_id][0],[],[]]
@@ -92,7 +100,8 @@ class Simulator:
                     while self.current_time >= (self.histogram_id+1)*self.histogram_collection_time+file_start_time:
                         self.histogram_id += 1
                         self.all_histograms.append(self.current_histogram.copy())
-                        
+                    print('L ', len(self.all_histograms))
+
                 if invocation.app_id not in self.current_histogram.keys():
                     last_call_end_time = invocation.start_time + invocation.function_duration
                     idle_duration=[]
@@ -117,8 +126,8 @@ class Simulator:
                     print('current historgram: ')
                     print('  ', self.current_histogram)
 
-                if i == len(self.workload)-1:
-                            self.all_histograms.append(self.current_histogram)
+            if day== total_days and i == len(self.workload)-1:
+                self.all_histograms.append(self.current_histogram)
 
 if __name__ == "__main__":
 
@@ -140,5 +149,11 @@ if __name__ == "__main__":
     fig.supxlabel('Idle time per day')
     fig.supylabel('IT frequency per application')
     plt.show()
+
+    print(n_his)
+    print('last', simulator.current_time)
+    # for x in simulator.all_histograms:
+    #     print('\n')
+    #     print(x)
 
   
