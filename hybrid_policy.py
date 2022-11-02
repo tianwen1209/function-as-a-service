@@ -1,3 +1,4 @@
+from collections import defaultdict
 from Application import Application
 from Function import Function
 
@@ -134,6 +135,7 @@ class Simulator:
         self.histogram_id = 0
         OOB_apps_list = []
         self.scenario_stats = [0,0,0]
+        predict_next_IT = defaultdict([None,None])
         
         for day in range(1, total_days+1):
             print("loading workload of day {}".format(day))
@@ -243,15 +245,21 @@ class Simulator:
                     training_data = training_data + self.current_histogram[invocation.app_id][1]
                     if verbose:
                         print('training data: ', training_data)
-                    if len(training_data) <=3:
-                        next_IT = training_data[-1]
+                    if training_data != predict_next_IT[invocation.app_id][0]:
+                        if len(training_data) <=3:
+                            next_IT = training_data[-1]
+                        else:
+                            arima = pm.auto_arima(training_data, error_action='warn', trace=False,
+                                                    suppress_warnings=True, maxiter=10,
+                                                    seasonal=False)
+                            next_IT = arima.predict(n_periods=1)[0]
+                        predict_next_IT[invocation.app_id][0] = training_data
+                        predict_next_IT[invocation.app_id][1] = next_IT
                     else:
-                        arima = pm.auto_arima(training_data, error_action='warn', trace=False,
-                                                suppress_warnings=True, maxiter=10,
-                                                seasonal=False)
-                        next_IT = arima.predict(n_periods=1)[0]
+                        next_IT = predict_next_IT[invocation.app_id][1]
                     prewarm_window = 0.85*next_IT  # set pre-warm window elapse just before the next invocation
                     keep_alive_window = 2*0.15*next_IT # a short keep-alive window
+                    predict_next_IT[invocation.app_id] = [training_data, next_IT]
                     if verbose:
                         print(f'ARIMA preficted next IT: {next_IT}')
                         print("prewarm_window: ", prewarm_window, "keep_alive_window: ", keep_alive_window)
