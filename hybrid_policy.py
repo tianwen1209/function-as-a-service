@@ -125,7 +125,7 @@ class Simulator:
                     self.start_cold += 1
                     self.application_in_memory[invocation.app_id] = [invocation.app, invocation, invocation.start_time, invocation.end_time, pre_warm_time, keep_live_time]
 
-    def simulation_hybrid(self, verbose=True, file_start_time=0, histogram_collection_time=24*60*60, pattern_min_len=10, IT_behavior_change=0.5):
+    def simulation_hybrid(self, verbose=True, total_days=6, file_start_time=0, histogram_collection_time=24*60*60, pattern_min_len=10, IT_behavior_change=0.5):
         start_time = time.time()
         self.histogram_collection_time = histogram_collection_time
         self.pattern_min_len = pattern_min_len
@@ -135,12 +135,14 @@ class Simulator:
         OOB_apps_list = []
         self.scenario_stats = [0,0,0]
         
-        for day in range(3, 6):
+        for day in range(1, total_days+1):
             print("loading workload of day {}".format(day))
             self.load_workload(day)
             self.workload.sort(key=lambda x:x.start_time)
 
             for i, invocation in enumerate(tqdm(self.workload)):
+                if invocation.start_time<(day-1)*24*60*60:
+                    continue
                 self.current_time = invocation.start_time
                 # check if the app has been load in memory and record memory waste time
                 self.check_alive_pre_warm(invocation.app_id)
@@ -201,7 +203,7 @@ class Simulator:
                     print('func ', invocation.function_id,' previous histogram of ITs: ', previous_histogram)
 
                 if self.update_OOB_apps:
-                    OOB_apps_list = find_OOB_app(self.all_histograms[-1], OOB_duration=4*360, percent_threshold=0.25)
+                    OOB_apps_list = find_OOB_app(self.all_histograms[-1], OOB_duration=4*3600, percent_threshold=0.25)
                     self.update_OOB_apps = False
 
                 pattern_represent = True
@@ -214,6 +216,7 @@ class Simulator:
                         mean_pre_pre = mean(pre_previous_histogram)
                         if abs(mean_pre-mean_pre_pre)/mean_pre_pre>=IT_behavior_change:
                             pattern_represent = False
+                            print("histogram changed")
 
                 if verbose:
                     print('the list of OOB apps based on the previous ITs: ',OOB_apps_list, '\n')
@@ -277,8 +280,8 @@ class Simulator:
                 if current_memory_usage > self.max_memory:
                     self.max_memory = current_memory_usage
 
-                if i == len(self.workload)-1:
-                            self.all_histograms.append(self.current_histogram)
+            if day== total_days and i == len(self.workload)-1:
+                self.all_histograms.append(self.current_histogram)
         
         self.simulation_time = time.time() - start_time
 
@@ -298,7 +301,7 @@ if __name__ == "__main__":
     # ]
 
     simulator = Simulator()
-    simulator.simulation_hybrid(verbose=False, file_start_time=210)
+    simulator.simulation_hybrid(verbose=False,total_days=4)
     n = sum(simulator.scenario_stats)
 
     print("\n")
