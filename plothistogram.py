@@ -76,7 +76,7 @@ class Simulator:
         for day in range(1, total_days+1):
             print("loading workload of day {}".format(day))
             self.load_workload(day)
-            self.workload.sort(key=lambda x:x.start_time)
+            # self.workload.sort(key=lambda x:x.start_time)
 
             for i, invocation in enumerate(tqdm(self.workload)):
                 if invocation.start_time< (day-1)*24*60*60:
@@ -88,9 +88,9 @@ class Simulator:
                     self.update_OOB_apps = True
                     self.histogram_id += 1
 
-                    print('Y ', len(self.all_histograms))
+                    # print('Y ', len(self.all_histograms))
                     self.all_histograms.append(self.current_histogram.copy())
-                    print('X ', len(self.all_histograms))
+                    # print('X ', len(self.all_histograms))
 
                     for app_id in self.current_histogram.keys():
                         # keep the previous call end time and clear idle durations
@@ -100,7 +100,7 @@ class Simulator:
                     while self.current_time >= (self.histogram_id+1)*self.histogram_collection_time+file_start_time:
                         self.histogram_id += 1
                         self.all_histograms.append(self.current_histogram.copy())
-                    print('L ', len(self.all_histograms))
+                    # print('L ', len(self.all_histograms))
 
                 if invocation.app_id not in self.current_histogram.keys():
                     last_call_end_time = invocation.start_time + invocation.function_duration
@@ -135,7 +135,7 @@ if __name__ == "__main__":
     c = mcolors.TABLEAU_COLORS
 
     simulator = Simulator()
-    simulator.plot_hybrid(verbose=False)
+    simulator.plot_hybrid(verbose=False, total_days=5)
 
     n_app = len(app_dict.keys())
     n_his = len(simulator.all_histograms)
