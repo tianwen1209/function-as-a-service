@@ -14,10 +14,13 @@ import json
 import time
 
 
-tf = open("app_dict_3.json", "r")
+tf = open("app_dict_100.json", "r")
 dict = json.load(tf)
 app_dict = dict[0]
 func_dict = dict[1]
+
+app_id_plot = [1,2,3,4,12,30,55,66,90,97]
+
 
 def find_OOB_app(histogram, OOB_duration, percent_threshold):
 
@@ -79,12 +82,14 @@ class Simulator:
             # self.workload.sort(key=lambda x:x.start_time)
 
             for i, invocation in enumerate(tqdm(self.workload)):
+                if int(invocation.app_id) not in app_id_plot:
+                    continue
                 if invocation.start_time< (day-1)*24*60*60:
                     continue
                 self.current_time = invocation.start_time
 
                 if self.current_time>=(self.histogram_id+1)*self.histogram_collection_time+file_start_time:
-                    print(self.current_time, (self.histogram_id+1)*self.histogram_collection_time+file_start_time)
+                    # print(self.current_time, (self.histogram_id+1)*self.histogram_collection_time+file_start_time)
                     self.update_OOB_apps = True
                     self.histogram_id += 1
 
@@ -133,27 +138,25 @@ if __name__ == "__main__":
 
     import matplotlib.colors as mcolors
     c = mcolors.TABLEAU_COLORS
+    c = [ x for x in c]
 
     simulator = Simulator()
-    simulator.plot_hybrid(verbose=False, total_days=5)
+    simulator.plot_hybrid(verbose=False, total_days=10)
 
-    n_app = len(app_dict.keys())
     n_his = len(simulator.all_histograms)
+    fig, axs = plt.subplots(nrows=len(app_id_plot), ncols=n_his,figsize=(len(app_id_plot)*2,n_his*3))
+    for i,app in enumerate(app_id_plot):
+        for day in range(n_his):
+            # print(i, app, day)
+            # print(simulator.all_histograms[day][str(app)][1])
+            axs[i,day].hist(simulator.all_histograms[day][str(app)][1],bins=10,color=c[i%len(c)])
+            if i==len(app_id_plot)-1:
+                axs[i,day].set_xlabel(f'day_{day+1}')
+            if day==0:
+                axs[i,day].set_ylabel(f'app_{app}')
+    plt.savefig('hist.png')
+    plt.close()
+    
 
-    fig, axs = plt.subplots(n_app,n_his, figsize=(8, 4), sharex=True, sharey=True)
-    for i, ax in enumerate(axs.flat):
-        x = i//n_his
-        y = i-x*n_his
-        ax.hist(simulator.all_histograms[y][str(x)][1],color=list(c.keys())[x])
-
-    fig.supxlabel('Idle time per day')
-    fig.supylabel('IT frequency per application')
-    plt.show()
-
-    print(n_his)
-    print('last', simulator.current_time)
-    # for x in simulator.all_histograms:
-    #     print('\n')
-    #     print(x)
 
   
