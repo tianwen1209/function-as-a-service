@@ -96,7 +96,7 @@ class Generator:
                 function_id_list = [function_id_num] * count
                 app_id_list = [app_id_num] * count
                 trigger_list = [trigger] * count
-                start_time_list = j*60+random_sec+(self.day-1)*24*60*60
+                start_time_list = (j-1)*60+random_sec+(self.day-1)*24*60*60
                 current_function_list = np.array([function_id_list, app_id_list, start_time_list, trigger_list, duration_list, memory_list]).T
                 self.function_list.append(current_function_list)
 
@@ -104,8 +104,9 @@ class Generator:
                 print(index,"\t", time.time()-start_time)
 
         function_array = np.concatenate(self.function_list)
-        function_array = function_array[np.argsort(function_array[:, 2])]
-        np.save('day{}.npy'.format(self.day), function_array)
+        function_array = function_array[np.argsort(function_array[:, 2].astype(float))]
+        # print(function_array.shape)
+        np.save('./workload_3/day{}.npy'.format(self.day), function_array)
         self.function_list = []
 
     def get_duration(self,func):
@@ -175,7 +176,7 @@ class Generator:
         return result
                           
 if __name__ == "__main__":
-    tmp=Generator(1)
+    tmp=Generator(4, data_root="./data/")
     function_list=tmp.gen()
     # print(tmp.get_memory(function_list[0]))
     # print(tmp.get_duration(function_list[0]))

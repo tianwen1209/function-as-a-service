@@ -14,7 +14,7 @@ from matplotlib import pyplot as plt
 import json
 import time
 
-tf = open("app_dict_3.json", "r")
+tf = open("app_dict_100.json", "r")
 dict = json.load(tf)
 app_dict = dict[0]
 func_dict = dict[1]
@@ -135,7 +135,7 @@ class Simulator:
         OOB_apps_list = []
         self.scenario_stats = [0,0,0]
         
-        for day in range(1, 3):
+        for day in range(3, 6):
             print("loading workload of day {}".format(day))
             self.load_workload(day)
             self.workload.sort(key=lambda x:x.start_time)
@@ -207,7 +207,7 @@ class Simulator:
                 pattern_represent = True
                 if len(previous_histogram)<self.pattern_min_len:
                     pattern_represent = False
-                elif len(self.all_histograms)>1:
+                elif len(self.all_histograms)>1 and invocation.app_id in self.all_histograms[-2]:
                     pre_previous_histogram = self.all_histograms[-2][invocation.app_id][1]
                     if len(pre_previous_histogram)>0:
                         mean_pre = mean(previous_histogram)
@@ -298,7 +298,7 @@ if __name__ == "__main__":
     # ]
 
     simulator = Simulator()
-    simulator.simulation_hybrid(verbose=True)
+    simulator.simulation_hybrid(verbose=False, file_start_time=210)
     n = sum(simulator.scenario_stats)
 
     print("\n")
