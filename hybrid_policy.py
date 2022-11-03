@@ -58,7 +58,7 @@ class Simulator:
         self.workload = []
 
     def load_workload(self, day):
-        function_array = np.load("day{}.npy".format(day))
+        function_array = np.load("./workload_100/day{}.npy".format(day))
         function_array = function_array.astype(object)
         print("size of workload: ", function_array.shape[0])
         self.workload = []
@@ -135,14 +135,19 @@ class Simulator:
         self.histogram_id = 0
         OOB_apps_list = []
         self.scenario_stats = [0,0,0]
-        predict_next_IT = defaultdict([None,None])
+        predict_next_IT = defaultdict(lambda: [None,None])
         
         for day in range(1, total_days+1):
             print("loading workload of day {}".format(day))
             self.load_workload(day)
-            self.workload.sort(key=lambda x:x.start_time)
+            # self.workload.sort(key=lambda x:x.start_time)
+            few_it_count = 0
+            hist_change_count = 0
 
             for i, invocation in enumerate(tqdm(self.workload)):
+                # if i % 100000 == 0 and i > 0:
+                #     print(f"number of ARIMA / IT dist / keep alive scenario: {simulator.scenario_stats[0]} / {simulator.scenario_stats[1]} / {simulator.scenario_stats[2]}")
+                #     print("few_it_count: ", few_it_count, "hist_change_count: ", hist_change_count)
                 if invocation.start_time<(day-1)*24*60*60:
                     continue
                 self.current_time = invocation.start_time
@@ -211,6 +216,7 @@ class Simulator:
                 pattern_represent = True
                 if len(previous_histogram)<self.pattern_min_len:
                     pattern_represent = False
+                    few_it_count += 1
                 elif len(self.all_histograms)>1 and invocation.app_id in self.all_histograms[-2]:
                     pre_previous_histogram = self.all_histograms[-2][invocation.app_id][1]
                     if len(pre_previous_histogram)>0:
@@ -218,7 +224,8 @@ class Simulator:
                         mean_pre_pre = mean(pre_previous_histogram)
                         if abs(mean_pre-mean_pre_pre)/mean_pre_pre>=IT_behavior_change:
                             pattern_represent = False
-                            print("histogram changed")
+                            # print("histogram changed")
+                            hist_change_count += 1
 
                 if verbose:
                     print('the list of OOB apps based on the previous ITs: ',OOB_apps_list, '\n')
@@ -309,7 +316,7 @@ if __name__ == "__main__":
     # ]
 
     simulator = Simulator()
-    simulator.simulation_hybrid(verbose=False,total_days=4)
+    simulator.simulation_hybrid(verbose=False,total_days=12)
     n = sum(simulator.scenario_stats)
 
     print("\n")
