@@ -48,8 +48,8 @@ class Simulator:
             workload (list of Function objects): _description_
         """
         self.current_time = 0
-        self.start_cold = 0
-        self.start_warm = 0
+        self.start_cold_dict = defaultdict(lambda:0)
+        self.start_warm_dict = defaultdict(lambda:0)
         # {key: application id, value: [application object, list of invocations, load_time, last_finish_time, keep_live_until]}
         self.application_in_memory = {}
         self.max_memory = 0
@@ -96,7 +96,7 @@ class Simulator:
     def add_invocation(self, invocation, keep_live_time, pre_warm_time):
         # if the application is not in memory, cold start
         if not invocation.app_id in self.application_in_memory:
-            self.start_cold += 1
+            self.start_cold_dict[invocation.app_id] += 1
             self.application_in_memory[invocation.app_id] = [invocation.app, invocation, invocation.start_time, invocation.end_time, pre_warm_time, keep_live_time]
             # if the application has been loaded before, check if warm start
         else:
@@ -104,7 +104,7 @@ class Simulator:
             # if warm start
             last_finish_time = current_app_state[3] #invocation.end_time
             if last_finish_time > invocation.start_time:
-                self.start_warm += 1
+                self.start_warm_dict[invocation.app_id] += 1
                 # updated the end_time and keep_alive_until time
                 if invocation.end_time > last_finish_time:
                     current_app_state[1] = invocation
@@ -115,7 +115,7 @@ class Simulator:
                 previous_pre_warm_time = current_app_state[4]
                 pre_warm_load_time = last_finish_time + previous_pre_warm_time
                 if pre_warm_load_time <= self.current_time:
-                    self.start_warm += 1
+                    self.start_warm_dict[invocation.app_id] += 1
                     # update memory waste time (only happens for the case of pre-warm)
                     self.wasted_memory_time += invocation.start_time - pre_warm_load_time
                     current_app_state[1] = invocation
@@ -123,7 +123,7 @@ class Simulator:
                     current_app_state[4] = pre_warm_time
                     current_app_state[5] = keep_live_time
                 else:
-                    self.start_cold += 1
+                    self.start_cold_dict[invocation.app_id] += 1
                     self.application_in_memory[invocation.app_id] = [invocation.app, invocation, invocation.start_time, invocation.end_time, pre_warm_time, keep_live_time]
 
     def simulation_hybrid(self, verbose=True, total_days=6, file_start_time=0, histogram_collection_time=24*60*60, pattern_min_len=10, IT_behavior_change=0.5):
@@ -233,7 +233,7 @@ class Simulator:
                 if len(previous_histogram)!=0:
                     previous_histogram =  np.array(previous_histogram)
                     percent5 = np.percentile(previous_histogram, 5)
-                    percent99 = np.percentile(previous_histogram, 99)
+                    percent99 = np.percentile(previous_histogram, 95)
                     histogram_range = percent99
                 else:
                     # if there is no IT in previous histogram, set any value (e.g. 5 mins) for keep alive window
@@ -319,15 +319,39 @@ if __name__ == "__main__":
     simulator.simulation_hybrid(verbose=False,total_days=12)
     n = sum(simulator.scenario_stats)
 
+
+    cold_start_total = 0
+    warm_start_total = 0
+    cold_start_rate_list = []
+    # print(simulator.start_cold_dict)
+    # print(len(simulator.start_cold_dict))
+    # print(len(simulator.start_warm_dict))
+    for app_id in range(100):
+        app_id_str = str(app_id)
+        cold_start = simulator.start_cold_dict[app_id_str]
+        warm_start = simulator.start_warm_dict[app_id_str]
+        cold_start_total += cold_start
+        warm_start_total += warm_start
+        if cold_start + warm_start > 0:
+            cold_start_rate_list.append(cold_start/(cold_start+warm_start))
+    
+    cold_start_rate_list = np.array(cold_start_rate_list)
+    np.save("cold_start_rate_distribution_5_95.npy", cold_start_rate_list)
+
+
+
+
     print("\n")
     print("----------------------------------------------------")
     print(f"number of ARIMA / IT dist / keep alive scenario: {simulator.scenario_stats[0]/n*100:.2f}% / {simulator.scenario_stats[1]/n*100:.2f}% / {simulator.scenario_stats[2]/n*100:.2f}%")
-    print("number of cold start: {}".format(simulator.start_cold))
-    print("number of warm start: {}".format(simulator.start_warm))
-    print("cold start rate: {}".format(simulator.start_cold/(simulator.start_cold + simulator.start_warm)))
+    print("number of cold start: {}".format(cold_start_total))
+    print("number of warm start: {}".format(warm_start_total))
+    print("cold start rate: {}".format(cold_start_total/(cold_start_total + warm_start_total)))
     print("Maximum memory usage: {}".format(simulator.max_memory))
     print("memory waste time: {}".format(simulator.wasted_memory_time))
     print("Simulation time: {}".format(simulator.simulation_time))
     print("----------------------------------------------------")
+
+
 
 
