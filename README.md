@@ -1,4 +1,4 @@
-# function-as-a-service-CE7490
+# function-as-a-service
 Optimising the Serverless Workload at Cloud
 
 ## Azure Functions Trace 2019
