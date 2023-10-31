@@ -343,7 +343,22 @@ def main(**kwargs):
             cold_start_rate_list.append(cold_start/(cold_start+warm_start))
     
     cold_start_rate_list = np.array(cold_start_rate_list)
-    np.save(f"cold_start_rate_distribution_{kwargs['app']}_{kwargs['pt1']}_{kwargs['pt2']}_{kwargs['window_period']}.npy", cold_start_rate_list)
+    result = {
+        "ARIMA_IT_dist_keep_alive_scenario": {
+            "ARIMA": simulator.scenario_stats[0]/n*100,
+            "IT_dist": simulator.scenario_stats[1]/n*100,
+            "keep_alive": simulator.scenario_stats[2]/n*100
+        },
+        "number_of_cold_start": cold_start_total,
+        "number_of_warm_start": warm_start_total,
+        "cold_start_rate": cold_start_total/(cold_start_total + warm_start_total),
+        "Maximum_memory_usage": simulator.max_memory,
+        "memory_waste_time": simulator.wasted_memory_time,
+        "Simulation_time": simulator.simulation_time,
+        "cold_start_rate_list": cold_start_rate_list
+    }
+    # np.save(f"cold_start_rate_distribution_{kwargs['app']}_{kwargs['pt1']}_{kwargs['pt2']}_{kwargs['window_period']}.npy", cold_start_rate_list)
+    np.save(f"cold_start_rate_distribution_{kwargs['app']}_{kwargs['pt1']}_{kwargs['pt2']}_{kwargs['window_period']}.npy", result)
 
 
     print("\n")
@@ -374,4 +389,4 @@ if __name__ == "__main__":
     # for pt1 in [0,1,5]:
     #     for pt2 in [99,95,90]:
     for window_period in [0.5,0.65,0.75,0.85,0.9]:
-        main(app=10,pt1=5,pt2=95,window_period=window_period)
+        main(app=5,pt1=5,pt2=95,window_period=window_period)

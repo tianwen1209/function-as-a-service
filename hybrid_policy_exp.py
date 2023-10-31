@@ -16,7 +16,7 @@ if __name__ == "__main__":
     #     Function(4, 1, 15, 'HTTP', 4, 1),
     #     Function(5, 1, 20, 'HTTP', 1, 1)
     # ]
-    # for pt1 in [0,1,5]:
-    #     for pt2 in [99,95,90]:
-    for window_period in [0.5,0.65,0.75,0.85,0.9]:
-        main(app=100,pt1=5,pt2=95,window_period=window_period)
+    for pt1 in [0,1,5]:
+        for pt2 in [90, 95, 99]:
+            for window_period in [0.5,0.65,0.75,0.85,0.9]:
+                main(app=200,pt1=5,pt2=95,window_period=window_period)
