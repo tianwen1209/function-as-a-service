@@ -15,11 +15,6 @@ from matplotlib import pyplot as plt
 import json
 import time
 
-tf = open("app_dict_100.json", "r")
-dict = json.load(tf)
-app_dict = dict[0]
-func_dict = dict[1]
-
 def find_OOB_app(histogram, OOB_duration, percent_threshold):
 
     if len(histogram)==0:
@@ -57,8 +52,8 @@ class Simulator:
         self.update_OOB_apps = False
         self.workload = []
 
-    def load_workload(self, day):
-        function_array = np.load("./workload_100/day{}.npy".format(day))
+    def load_workload(self, app, day):
+        function_array = np.load("./workload_{}/day{}.npy".format(app,day))
         function_array = function_array.astype(object)
         print("size of workload: ", function_array.shape[0])
         self.workload = []
@@ -126,7 +121,7 @@ class Simulator:
                     self.start_cold_dict[invocation.app_id] += 1
                     self.application_in_memory[invocation.app_id] = [invocation.app, invocation, invocation.start_time, invocation.end_time, pre_warm_time, keep_live_time]
 
-    def simulation_hybrid(self, verbose=True, total_days=6, file_start_time=0, histogram_collection_time=24*60*60, pattern_min_len=10, IT_behavior_change=0.5):
+    def simulation_hybrid(self, app, app_dict, func_dict, verbose=True, total_days=6, file_start_time=0, histogram_collection_time=24*60*60, pattern_min_len=10, IT_behavior_change=0.5, pt1=5, pt2=99, window_period=0.85):
         start_time = time.time()
         self.histogram_collection_time = histogram_collection_time
         self.pattern_min_len = pattern_min_len
@@ -137,13 +132,16 @@ class Simulator:
         self.scenario_stats = [0,0,0]
         predict_next_IT = defaultdict(lambda: [None,None])
         
+        cold_start_list = []
+        warm_start_list = []
         for day in range(1, total_days+1):
             print("loading workload of day {}".format(day))
-            self.load_workload(day)
+            self.load_workload(app, day)
             # self.workload.sort(key=lambda x:x.start_time)
             few_it_count = 0
             hist_change_count = 0
-
+            
+            self.scenario_stats = [0,0,0]
             for i, invocation in enumerate(tqdm(self.workload)):
                 # if i % 100000 == 0 and i > 0:
                 #     print(f"number of ARIMA / IT dist / keep alive scenario: {simulator.scenario_stats[0]} / {simulator.scenario_stats[1]} / {simulator.scenario_stats[2]}")
@@ -232,8 +230,8 @@ class Simulator:
 
                 if len(previous_histogram)!=0:
                     previous_histogram =  np.array(previous_histogram)
-                    percent5 = np.percentile(previous_histogram, 5)
-                    percent99 = np.percentile(previous_histogram, 95)
+                    percent5 = np.percentile(previous_histogram, pt1)
+                    percent99 = np.percentile(previous_histogram, pt2)
                     histogram_range = percent99
                 else:
                     # if there is no IT in previous histogram, set any value (e.g. 5 mins) for keep alive window
@@ -243,7 +241,7 @@ class Simulator:
                     self.scenario_stats[0]+=1
                     if verbose:
                         print('** Enter ARIMA Branch **')
-                    # enter ARIMA with at least one complete historical histogram
+                    # ! enter ARIMA with at least one complete historical histogram
                     # find all historical ITs as training data
                     training_data = []
                     for hist in self.all_histograms:
@@ -264,8 +262,8 @@ class Simulator:
                         predict_next_IT[invocation.app_id][1] = next_IT
                     else:
                         next_IT = predict_next_IT[invocation.app_id][1]
-                    prewarm_window = 0.85*next_IT  # set pre-warm window elapse just before the next invocation
-                    keep_alive_window = 2*0.15*next_IT # a short keep-alive window
+                    prewarm_window = window_period*next_IT  # ! set pre-warm window elapse just before the next invocation
+                    keep_alive_window = 2*(1-window_period)*next_IT # ! a short keep-alive window
                     predict_next_IT[invocation.app_id] = [training_data, next_IT]
                     if verbose:
                         print(f'ARIMA preficted next IT: {next_IT}')
@@ -274,13 +272,14 @@ class Simulator:
                     self.scenario_stats[1]+=1
                     if verbose:
                         print('** Enter IT Distribution Branch **')
-                    # enter IT distribution
+                    # ! enter IT distribution
                     prewarm_window = percent5
                     keep_alive_window = percent99-percent5
                     if verbose:
                         print("prewarm_window: ", prewarm_window, "keep_alive_window: ", keep_alive_window)
+                    # import pdb; pdb.set_trace()
                 else:
-                    # enter standard keep alive, conservative scenario
+                    # ! enter standard keep alive, conservative scenario
                     self.scenario_stats[2]+=1
                     if verbose:
                         print('** Enter Keep Alive Branch **')
@@ -288,6 +287,7 @@ class Simulator:
                     keep_alive_window = histogram_range
                     if verbose:
                         print("prewarm_window: ", prewarm_window, "keep_alive_window: ", keep_alive_window)
+                    # import pdb; pdb.set_trace()
 
                 self.add_invocation(invocation=invocation, pre_warm_time=prewarm_window, keep_live_time=keep_alive_window)
                 
@@ -295,30 +295,37 @@ class Simulator:
                 if current_memory_usage > self.max_memory:
                     self.max_memory = current_memory_usage
 
+            print(f"number of ARIMA / IT dist / keep alive scenario: {self.scenario_stats[0]/len(self.workload)*100:.2f}% / {self.scenario_stats[1]/len(self.workload)*100:.2f}% / {self.scenario_stats[2]/len(self.workload)*100:.2f}%")
+            
+            cold_start_total = 0
+            warm_start_total = 0
+            for app_id in range(100):
+                app_id_str = str(app_id)
+                cold_start = self.start_cold_dict[app_id_str]
+                warm_start = self.start_warm_dict[app_id_str]
+                cold_start_total += cold_start
+                warm_start_total += warm_start
+            cold_start_list.append(cold_start_total)
+            warm_start_list.append(warm_start_total)
+            if day > 1:
+                cold_start_total = cold_start_list[-1] - cold_start_list[-2]
+                warm_start_total = warm_start_list[-1] - warm_start_list[-2]
+            print(f"cold start: {cold_start_total}, warm start: {warm_start_total}")
+            
             if day== total_days and i == len(self.workload)-1:
                 self.all_histograms.append(self.current_histogram)
         
         self.simulation_time = time.time() - start_time
 
-
-if __name__ == "__main__":
-
-    # function_id, app_id, start_time, trigger, function_duration, function_memory
-    # function_list = [
-    #     Function(0, 0, 0, 'HTTP', 3, 1), 
-    #     Function(0, 0, 2, 'HTTP', 5, 1), 
-    #     Function(0, 0, 7.5, 'HTTP', 4, 1), 
-    #     Function(0, 0, 13, 'HTTP', 4, 1), 
-    #     Function(2, 1, 5, 'HTTP', 4, 1),
-    #     Function(3, 1, 11, 'HTTP', 1, 1),
-    #     Function(4, 1, 15, 'HTTP', 4, 1),
-    #     Function(5, 1, 20, 'HTTP', 1, 1)
-    # ]
-
+def main(**kwargs):
+    tf = open(f"app_dict_{kwargs['app']}.json", "r")
+    dict = json.load(tf)
+    app_dict = dict[0]
+    func_dict = dict[1]
+    
     simulator = Simulator()
-    simulator.simulation_hybrid(verbose=False,total_days=12)
+    simulator.simulation_hybrid(kwargs['app'], app_dict, func_dict, verbose=False,total_days=12, pt1=kwargs['pt1'], pt2=kwargs['pt2'], window_period=kwargs['window_period'])
     n = sum(simulator.scenario_stats)
-
 
     cold_start_total = 0
     warm_start_total = 0
@@ -336,9 +343,7 @@ if __name__ == "__main__":
             cold_start_rate_list.append(cold_start/(cold_start+warm_start))
     
     cold_start_rate_list = np.array(cold_start_rate_list)
-    np.save("cold_start_rate_distribution_5_95.npy", cold_start_rate_list)
-
-
+    np.save(f"cold_start_rate_distribution_{kwargs['app']}_{kwargs['pt1']}_{kwargs['pt2']}_{kwargs['window_period']}.npy", cold_start_rate_list)
 
 
     print("\n")
@@ -351,7 +356,22 @@ if __name__ == "__main__":
     print("memory waste time: {}".format(simulator.wasted_memory_time))
     print("Simulation time: {}".format(simulator.simulation_time))
     print("----------------------------------------------------")
+    
 
+if __name__ == "__main__":
 
-
-
+    # function_id, app_id, start_time, trigger, function_duration, function_memory
+    # function_list = [
+    #     Function(0, 0, 0, 'HTTP', 3, 1), 
+    #     Function(0, 0, 2, 'HTTP', 5, 1), 
+    #     Function(0, 0, 7.5, 'HTTP', 4, 1), 
+    #     Function(0, 0, 13, 'HTTP', 4, 1), 
+    #     Function(2, 1, 5, 'HTTP', 4, 1),
+    #     Function(3, 1, 11, 'HTTP', 1, 1),
+    #     Function(4, 1, 15, 'HTTP', 4, 1),
+    #     Function(5, 1, 20, 'HTTP', 1, 1)
+    # ]
+    # for pt1 in [0,1,5]:
+    #     for pt2 in [99,95,90]:
+    for window_period in [0.5,0.65,0.75,0.85,0.9]:
+        main(app=5,pt1=5,pt2=95,window_period=window_period)

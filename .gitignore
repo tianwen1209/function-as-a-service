@@ -1,0 +1,9 @@
+# data dirs
+workload*
+data/
+
+# npy data
+*.npy
+
+# cache
+*.pyc

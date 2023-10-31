@@ -33,7 +33,7 @@ class Sampler:
         self.function_list=[]             
         self.data_root = data_root
         
-        self.invocations_function=pd.read_csv("{}invocations_per_function_md.anon.d{:02d}.csv".format(data_root, 1))                
+        self.invocations_function=pd.read_csv("data/{}invocations_per_function_md.anon.d{:02d}.csv".format(data_root, 1))                
         self.function_dict = {}
         self.app_dict = {}
 
@@ -59,7 +59,7 @@ class Sampler:
                 func_count += 1
 
         for i in range(2, 13):
-            self.invocations_function=pd.read_csv("{}invocations_per_function_md.anon.d{:02d}.csv".format(self.data_root, i))    
+            self.invocations_function=pd.read_csv("data/{}invocations_per_function_md.anon.d{:02d}.csv".format(self.data_root, i))    
 
             for index, row in self.invocations_function.iterrows():
                 function_id = row['HashFunction']
@@ -78,5 +78,6 @@ class Sampler:
         tf.close()
     
 if __name__ == "__main__":
-    tmp=Sampler()
-    function_list=tmp.sample(3)
+    for i in [50, 80, 150, 200]:
+        tmp=Sampler()
+        function_list=tmp.sample(i)

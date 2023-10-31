@@ -6,7 +6,7 @@ from numpy import number
 from collections import defaultdict
 import time
 import json
-
+import os
 
 class Function:
     def __init__(self,day,start_time,application_id,function_id,trigger,occur_count): 
@@ -27,7 +27,7 @@ class Application:
         
 
 class Generator:
-    def __init__(self, day, data_root='./'):
+    def __init__(self, day, data_root='./', total_app=10):
         """
         _summary_
         generate function
@@ -49,7 +49,8 @@ class Generator:
         self.duration_pattern=defaultdict(list)
         self.function_list=[]             
         self.day=day
-        tf = open("app_dict_3.json", "r")
+        self.total_app=total_app
+        tf = open(f"app_dict_{total_app}.json", "r")
         tmp = json.load(tf)
         self.app_dict = tmp[0]
         self.function_dict = tmp[1]
@@ -106,7 +107,9 @@ class Generator:
         function_array = np.concatenate(self.function_list)
         function_array = function_array[np.argsort(function_array[:, 2].astype(float))]
         # print(function_array.shape)
-        np.save('./workload_3/day{}.npy'.format(self.day), function_array)
+        if not os.path.exists(f'./workload_{self.total_app}'):
+            os.makedirs(f'./workload_{self.total_app}')
+        np.save(f'./workload_{self.total_app}/day{self.day}.npy', function_array)
         self.function_list = []
 
     def get_duration(self,func):
@@ -176,7 +179,9 @@ class Generator:
         return result
                           
 if __name__ == "__main__":
-    tmp=Generator(4, data_root="./data/")
-    function_list=tmp.gen()
+    for app in [50, 80, 150, 200]:
+        for i in range(1,13):
+            tmp=Generator(i, data_root="./data/", total_app=app)
+            function_list=tmp.gen()
     # print(tmp.get_memory(function_list[0]))
     # print(tmp.get_duration(function_list[0]))
