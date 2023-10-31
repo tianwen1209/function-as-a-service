@@ -13,8 +13,8 @@ from matplotlib import pyplot as plt
 import json
 import time
 
-
-tf = open("app_dict_100.json", "r")
+app_num = 100
+tf = open(f"app_dict_{app_num}.json", "r")
 dict = json.load(tf)
 app_dict = dict[0]
 func_dict = dict[1]
@@ -58,8 +58,8 @@ class Simulator:
         self.update_OOB_apps = False
         self.workload = []
 
-    def load_workload(self, day):
-        function_array = np.load("day{}.npy".format(day))
+    def load_workload(self, app, day):
+        function_array = np.load("./workload_{}/day{}.npy".format(app,day))
         function_array = function_array.astype(object)
         print("size of workload: ", function_array.shape[0])
         self.workload = []
@@ -78,7 +78,7 @@ class Simulator:
         
         for day in range(1, total_days+1):
             print("loading workload of day {}".format(day))
-            self.load_workload(day)
+            self.load_workload(app_num, day)
             # self.workload.sort(key=lambda x:x.start_time)
 
             for i, invocation in enumerate(tqdm(self.workload)):
