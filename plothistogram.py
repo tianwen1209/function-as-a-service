@@ -13,7 +13,7 @@ from matplotlib import pyplot as plt
 import json
 import time
 
-app_num = 100
+app_num = 200
 tf = open(f"app_dict_{app_num}.json", "r")
 dict = json.load(tf)
 app_dict = dict[0]
@@ -76,16 +76,20 @@ class Simulator:
         OOB_apps_list = []
         self.scenario_stats = [0,0,0]
         
+        app_id_list = []
         for day in range(1, total_days+1):
             print("loading workload of day {}".format(day))
             self.load_workload(app_num, day)
             # self.workload.sort(key=lambda x:x.start_time)
 
             for i, invocation in enumerate(tqdm(self.workload)):
-                if int(invocation.app_id) not in app_id_plot:
-                    continue
+                # if int(invocation.app_id) not in app_id_plot:
+                #     continue
                 if invocation.start_time< (day-1)*24*60*60:
                     continue
+                # ! all app plot
+                if int(invocation.app_id) not in app_id_list:
+                    app_id_list.append(int(invocation.app_id))
                 self.current_time = invocation.start_time
 
                 if self.current_time>=(self.histogram_id+1)*self.histogram_collection_time+file_start_time:
@@ -133,7 +137,10 @@ class Simulator:
 
             if day== total_days and i == len(self.workload)-1:
                 self.all_histograms.append(self.current_histogram)
-
+                
+        return app_id_list
+    
+    
 if __name__ == "__main__":
 
     import matplotlib.colors as mcolors
@@ -141,22 +148,25 @@ if __name__ == "__main__":
     c = [ x for x in c]
 
     simulator = Simulator()
-    simulator.plot_hybrid(verbose=False, total_days=10)
-
-    n_his = len(simulator.all_histograms)
-    fig, axs = plt.subplots(nrows=len(app_id_plot), ncols=n_his,figsize=(len(app_id_plot)*2,n_his*3))
-    for i,app in enumerate(app_id_plot):
-        for day in range(n_his):
-            # print(i, app, day)
-            # print(simulator.all_histograms[day][str(app)][1])
-            axs[i,day].hist(simulator.all_histograms[day][str(app)][1],bins=10,color=c[i%len(c)])
-            if i==len(app_id_plot)-1:
-                axs[i,day].set_xlabel(f'day_{day+1}')
-            if day==0:
-                axs[i,day].set_ylabel(f'app_{app}')
-    plt.savefig('hist.png')
-    plt.close()
+    app_id_list = simulator.plot_hybrid(verbose=False, total_days=3)
     
-
-
-  
+    print('app_id_list', len(app_id_list))
+    # split hist into n/10 pics
+    app_in_one_plot = 10
+    for j in range(int(len(app_id_list)/app_in_one_plot)):
+        print(j)
+        plt.figure() 
+        app_id_list_slice = app_id_list[j*app_in_one_plot:(j+1)*app_in_one_plot]
+        n_his = len(simulator.all_histograms)
+        fig, axs = plt.subplots(nrows=len(app_id_list_slice), ncols=n_his,figsize=(len(app_id_list_slice)*2,n_his*3))
+        for i,app in enumerate(app_id_list_slice):
+            for day in range(n_his):
+                # print(i, app, day)
+                # print(simulator.all_histograms[day][str(app)][1])
+                axs[i,day].hist(simulator.all_histograms[day][str(app)][1],bins=10,color=c[i%len(c)])
+                if i==len(app_id_list_slice)-1:
+                    axs[i,day].set_xlabel(f'day_{day+1}')
+                if day==0:
+                    axs[i,day].set_ylabel(f'app_{app}')
+        plt.savefig(f'saved_figures/hist{j}.png')
+        plt.close()

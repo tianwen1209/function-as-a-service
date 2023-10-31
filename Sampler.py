@@ -78,6 +78,6 @@ class Sampler:
         tf.close()
     
 if __name__ == "__main__":
-    for i in [50, 80, 150, 200]:
+    for i in [800]:
         tmp=Sampler()
         function_list=tmp.sample(i)
