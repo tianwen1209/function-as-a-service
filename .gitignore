@@ -1,0 +1,10 @@
+# data dirs
+workload*
+data/
+saved_figures
+
+# npy data
+*.npy
+
+# cache
+*.pyc
