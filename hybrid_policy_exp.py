@@ -19,4 +19,4 @@ if __name__ == "__main__":
     # for pt1 in [0,1,5]:
     #     for pt2 in [99,95,90]:
     for window_period in [0.5,0.65,0.75,0.85,0.9]:
-        main(app=100,pt1=5,pt2=95,window_period=window_period)
+        main(app=200,pt1=5,pt2=95,window_period=window_period)

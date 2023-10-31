@@ -2540,6 +2540,7 @@ static const char __pyx_k_test[] = "__test__";
 static const char __pyx_k_time[] = "time";
 static const char __pyx_k_tqdm[] = "tqdm";
 static const char __pyx_k_warn[] = "warn";
+static const char __pyx_k_ARIMA[] = "ARIMA";
 static const char __pyx_k_arima[] = "arima";
 static const char __pyx_k_array[] = "array";
 static const char __pyx_k_numpy[] = "numpy";
@@ -2564,7 +2565,9 @@ static const char __pyx_k_number[] = "number";
 static const char __pyx_k_object[] = "object";
 static const char __pyx_k_pandas[] = "pandas";
 static const char __pyx_k_pyplot[] = "pyplot";
+static const char __pyx_k_result[] = "result";
 static const char __pyx_k_HashApp[] = "HashApp: ";
+static const char __pyx_k_IT_dist[] = "IT_dist";
 static const char __pyx_k_func_id[] = "func id: ";
 static const char __pyx_k_maxiter[] = "maxiter";
 static const char __pyx_k_next_IT[] = "next_IT";
@@ -2598,6 +2601,7 @@ static const char __pyx_k_app_id_str[] = "app_id_str";
 static const char __pyx_k_auto_arima[] = "auto_arima";
 static const char __pyx_k_cold_start[] = "cold start: ";
 static const char __pyx_k_invocation[] = "invocation";
+static const char __pyx_k_keep_alive[] = "keep_alive";
 static const char __pyx_k_matplotlib[] = "matplotlib";
 static const char __pyx_k_max_memory[] = "max_memory";
 static const char __pyx_k_percentile[] = "percentile";
@@ -2639,9 +2643,9 @@ static const char __pyx_k_function_array[] = "function_array";
 static const char __pyx_k_keep_live_time[] = "keep_live_time";
 static const char __pyx_k_prewarm_window[] = "prewarm_window: ";
 static const char __pyx_k_scenario_stats[] = "scenario_stats";
-static const char __pyx_k_Simulation_time[] = "Simulation time: {}";
+static const char __pyx_k_Simulation_time[] = "Simulation_time";
 static const char __pyx_k_cold_start_list[] = "cold_start_list";
-static const char __pyx_k_cold_start_rate[] = "cold start rate: {}";
+static const char __pyx_k_cold_start_rate[] = "cold_start_rate";
 static const char __pyx_k_file_start_time[] = "file_start_time";
 static const char __pyx_k_func_start_time[] = " | func start time: ";
 static const char __pyx_k_function_memory[] = "function_memory";
@@ -2663,13 +2667,15 @@ static const char __pyx_k_last_finish_time[] = "last_finish_time";
 static const char __pyx_k_prewarm_window_2[] = "prewarm_window";
 static const char __pyx_k_size_of_workload[] = "size of workload: ";
 static const char __pyx_k_warm_start_total[] = "warm_start_total";
+static const char __pyx_k_Simulation_time_2[] = "Simulation time: {}";
+static const char __pyx_k_cold_start_rate_2[] = "cold start rate: {}";
 static const char __pyx_k_current_app_state[] = "current_app_state";
 static const char __pyx_k_current_histogram[] = "current_histogram";
 static const char __pyx_k_file_start_time_2[] = "file start time: ";
 static const char __pyx_k_function_duration[] = "function_duration";
 static const char __pyx_k_hist_change_count[] = "hist_change_count";
 static const char __pyx_k_keep_alive_window[] = "keep_alive_window: ";
-static const char __pyx_k_memory_waste_time[] = "memory waste time: {}";
+static const char __pyx_k_memory_waste_time[] = "memory_waste_time";
 static const char __pyx_k_pattern_represent[] = "pattern_represent";
 static const char __pyx_k_percent_threshold[] = "percent_threshold";
 static const char __pyx_k_simulation_hybrid[] = "simulation_hybrid";
@@ -2686,13 +2692,17 @@ static const char __pyx_k_previous_histogram[] = "previous_histogram";
 static const char __pyx_k_wasted_memory_time[] = "wasted_memory_time";
 static const char __pyx_k_hybrid_policy_c_pyx[] = "hybrid_policy_c.pyx";
 static const char __pyx_k_keep_alive_window_2[] = "keep_alive_window";
-static const char __pyx_k_Maximum_memory_usage[] = "Maximum memory usage: {}";
+static const char __pyx_k_memory_waste_time_2[] = "memory waste time: {}";
+static const char __pyx_k_Maximum_memory_usage[] = "Maximum_memory_usage";
 static const char __pyx_k_check_alive_pre_warm[] = "check_alive_pre_warm";
 static const char __pyx_k_cold_start_rate_list[] = "cold_start_rate_list";
 static const char __pyx_k_current_memory_usage[] = "current_memory_usage";
-static const char __pyx_k_number_of_cold_start[] = "number of cold start: {}";
-static const char __pyx_k_number_of_warm_start[] = "number of warm start: {}";
+static const char __pyx_k_number_of_cold_start[] = "number_of_cold_start";
+static const char __pyx_k_number_of_warm_start[] = "number_of_warm_start";
 static const char __pyx_k_application_in_memory[] = "application_in_memory";
+static const char __pyx_k_Maximum_memory_usage_2[] = "Maximum memory usage: {}";
+static const char __pyx_k_number_of_cold_start_2[] = "number of cold start: {}";
+static const char __pyx_k_number_of_warm_start_2[] = "number of warm start: {}";
 static const char __pyx_k_pre_previous_histogram[] = "pre_previous_histogram";
 static const char __pyx_k_previous_pre_warm_time[] = "previous_pre_warm_time";
 static const char __pyx_k_ARIMA_preficted_next_IT[] = "ARIMA preficted next IT: ";
@@ -2708,6 +2718,7 @@ static const char __pyx_k_Simulator_simulation_hybrid[] = "Simulator.simulation_
 static const char __pyx_k_Enter_IT_Distribution_Branch[] = "** Enter IT Distribution Branch **";
 static const char __pyx_k_cold_start_rate_distribution[] = "cold_start_rate_distribution_";
 static const char __pyx_k_Simulator_check_alive_pre_warm[] = "Simulator.check_alive_pre_warm";
+static const char __pyx_k_ARIMA_IT_dist_keep_alive_scenari[] = "ARIMA_IT_dist_keep_alive_scenario";
 static const char __pyx_k_Function_or_App_not_in_the_dicti[] = "Function or App not in the dictionary";
 static const char __pyx_k_Simulator___init___locals_lambda[] = "Simulator.__init__.<locals>.<lambda>";
 static const char __pyx_k_Simulator_simulation_hybrid_loca[] = "Simulator.simulation_hybrid.<locals>.<lambda>";
@@ -2757,6 +2768,8 @@ typedef struct {
   #endif
   PyObject *__pyx_kp_s_;
   PyObject *__pyx_kp_u_2f;
+  PyObject *__pyx_n_s_ARIMA;
+  PyObject *__pyx_n_s_ARIMA_IT_dist_keep_alive_scenari;
   PyObject *__pyx_kp_u_ARIMA_preficted_next_IT;
   PyObject *__pyx_n_s_Application;
   PyObject *__pyx_kp_s_Enter_ARIMA_Branch;
@@ -2767,11 +2780,14 @@ typedef struct {
   PyObject *__pyx_kp_u_HashApp;
   PyObject *__pyx_kp_u_HashFunction;
   PyObject *__pyx_n_s_IT_behavior_change;
-  PyObject *__pyx_kp_s_Maximum_memory_usage;
+  PyObject *__pyx_n_s_IT_dist;
+  PyObject *__pyx_n_s_Maximum_memory_usage;
+  PyObject *__pyx_kp_s_Maximum_memory_usage_2;
   PyObject *__pyx_n_s_OOB_apps;
   PyObject *__pyx_n_s_OOB_apps_list;
   PyObject *__pyx_n_s_OOB_duration;
-  PyObject *__pyx_kp_s_Simulation_time;
+  PyObject *__pyx_n_s_Simulation_time;
+  PyObject *__pyx_kp_s_Simulation_time_2;
   PyObject *__pyx_n_s_Simulator;
   PyObject *__pyx_n_s_Simulator___init;
   PyObject *__pyx_n_s_Simulator___init___locals_lambda;
@@ -2813,7 +2829,8 @@ typedef struct {
   PyObject *__pyx_kp_u_cold_start;
   PyObject *__pyx_n_s_cold_start_2;
   PyObject *__pyx_n_s_cold_start_list;
-  PyObject *__pyx_kp_s_cold_start_rate;
+  PyObject *__pyx_n_s_cold_start_rate;
+  PyObject *__pyx_kp_s_cold_start_rate_2;
   PyObject *__pyx_n_u_cold_start_rate_distribution;
   PyObject *__pyx_n_s_cold_start_rate_list;
   PyObject *__pyx_n_s_cold_start_total;
@@ -2871,6 +2888,7 @@ typedef struct {
   PyObject *__pyx_n_s_is_coroutine;
   PyObject *__pyx_kp_u_json;
   PyObject *__pyx_n_s_json_2;
+  PyObject *__pyx_n_s_keep_alive;
   PyObject *__pyx_kp_s_keep_alive_window;
   PyObject *__pyx_n_s_keep_alive_window_2;
   PyObject *__pyx_n_s_keep_live_time;
@@ -2889,7 +2907,8 @@ typedef struct {
   PyObject *__pyx_n_s_mean;
   PyObject *__pyx_n_s_mean_pre;
   PyObject *__pyx_n_s_mean_pre_pre;
-  PyObject *__pyx_kp_s_memory_waste_time;
+  PyObject *__pyx_n_s_memory_waste_time;
+  PyObject *__pyx_kp_s_memory_waste_time_2;
   PyObject *__pyx_n_s_metaclass;
   PyObject *__pyx_n_s_model_selection;
   PyObject *__pyx_n_s_module;
@@ -2901,8 +2920,10 @@ typedef struct {
   PyObject *__pyx_kp_u_npy;
   PyObject *__pyx_n_s_number;
   PyObject *__pyx_kp_u_number_of_ARIMA_IT_dist_keep_ali;
-  PyObject *__pyx_kp_s_number_of_cold_start;
-  PyObject *__pyx_kp_s_number_of_warm_start;
+  PyObject *__pyx_n_s_number_of_cold_start;
+  PyObject *__pyx_kp_s_number_of_cold_start_2;
+  PyObject *__pyx_n_s_number_of_warm_start;
+  PyObject *__pyx_kp_s_number_of_warm_start_2;
   PyObject *__pyx_n_s_numpy;
   PyObject *__pyx_n_s_object;
   PyObject *__pyx_n_s_open;
@@ -2936,6 +2957,7 @@ typedef struct {
   PyObject *__pyx_n_s_qualname;
   PyObject *__pyx_n_s_r;
   PyObject *__pyx_n_s_range;
+  PyObject *__pyx_n_s_result;
   PyObject *__pyx_n_s_round;
   PyObject *__pyx_n_s_save;
   PyObject *__pyx_n_s_scenario_stats;
@@ -3070,6 +3092,8 @@ static int __pyx_m_clear(PyObject *m) {
   #endif
   Py_CLEAR(clear_module_state->__pyx_kp_s_);
   Py_CLEAR(clear_module_state->__pyx_kp_u_2f);
+  Py_CLEAR(clear_module_state->__pyx_n_s_ARIMA);
+  Py_CLEAR(clear_module_state->__pyx_n_s_ARIMA_IT_dist_keep_alive_scenari);
   Py_CLEAR(clear_module_state->__pyx_kp_u_ARIMA_preficted_next_IT);
   Py_CLEAR(clear_module_state->__pyx_n_s_Application);
   Py_CLEAR(clear_module_state->__pyx_kp_s_Enter_ARIMA_Branch);
@@ -3080,11 +3104,14 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_kp_u_HashApp);
   Py_CLEAR(clear_module_state->__pyx_kp_u_HashFunction);
   Py_CLEAR(clear_module_state->__pyx_n_s_IT_behavior_change);
-  Py_CLEAR(clear_module_state->__pyx_kp_s_Maximum_memory_usage);
+  Py_CLEAR(clear_module_state->__pyx_n_s_IT_dist);
+  Py_CLEAR(clear_module_state->__pyx_n_s_Maximum_memory_usage);
+  Py_CLEAR(clear_module_state->__pyx_kp_s_Maximum_memory_usage_2);
   Py_CLEAR(clear_module_state->__pyx_n_s_OOB_apps);
   Py_CLEAR(clear_module_state->__pyx_n_s_OOB_apps_list);
   Py_CLEAR(clear_module_state->__pyx_n_s_OOB_duration);
-  Py_CLEAR(clear_module_state->__pyx_kp_s_Simulation_time);
+  Py_CLEAR(clear_module_state->__pyx_n_s_Simulation_time);
+  Py_CLEAR(clear_module_state->__pyx_kp_s_Simulation_time_2);
   Py_CLEAR(clear_module_state->__pyx_n_s_Simulator);
   Py_CLEAR(clear_module_state->__pyx_n_s_Simulator___init);
   Py_CLEAR(clear_module_state->__pyx_n_s_Simulator___init___locals_lambda);
@@ -3126,7 +3153,8 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_kp_u_cold_start);
   Py_CLEAR(clear_module_state->__pyx_n_s_cold_start_2);
   Py_CLEAR(clear_module_state->__pyx_n_s_cold_start_list);
-  Py_CLEAR(clear_module_state->__pyx_kp_s_cold_start_rate);
+  Py_CLEAR(clear_module_state->__pyx_n_s_cold_start_rate);
+  Py_CLEAR(clear_module_state->__pyx_kp_s_cold_start_rate_2);
   Py_CLEAR(clear_module_state->__pyx_n_u_cold_start_rate_distribution);
   Py_CLEAR(clear_module_state->__pyx_n_s_cold_start_rate_list);
   Py_CLEAR(clear_module_state->__pyx_n_s_cold_start_total);
@@ -3184,6 +3212,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_is_coroutine);
   Py_CLEAR(clear_module_state->__pyx_kp_u_json);
   Py_CLEAR(clear_module_state->__pyx_n_s_json_2);
+  Py_CLEAR(clear_module_state->__pyx_n_s_keep_alive);
   Py_CLEAR(clear_module_state->__pyx_kp_s_keep_alive_window);
   Py_CLEAR(clear_module_state->__pyx_n_s_keep_alive_window_2);
   Py_CLEAR(clear_module_state->__pyx_n_s_keep_live_time);
@@ -3202,7 +3231,8 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_mean);
   Py_CLEAR(clear_module_state->__pyx_n_s_mean_pre);
   Py_CLEAR(clear_module_state->__pyx_n_s_mean_pre_pre);
-  Py_CLEAR(clear_module_state->__pyx_kp_s_memory_waste_time);
+  Py_CLEAR(clear_module_state->__pyx_n_s_memory_waste_time);
+  Py_CLEAR(clear_module_state->__pyx_kp_s_memory_waste_time_2);
   Py_CLEAR(clear_module_state->__pyx_n_s_metaclass);
   Py_CLEAR(clear_module_state->__pyx_n_s_model_selection);
   Py_CLEAR(clear_module_state->__pyx_n_s_module);
@@ -3214,8 +3244,10 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_kp_u_npy);
   Py_CLEAR(clear_module_state->__pyx_n_s_number);
   Py_CLEAR(clear_module_state->__pyx_kp_u_number_of_ARIMA_IT_dist_keep_ali);
-  Py_CLEAR(clear_module_state->__pyx_kp_s_number_of_cold_start);
-  Py_CLEAR(clear_module_state->__pyx_kp_s_number_of_warm_start);
+  Py_CLEAR(clear_module_state->__pyx_n_s_number_of_cold_start);
+  Py_CLEAR(clear_module_state->__pyx_kp_s_number_of_cold_start_2);
+  Py_CLEAR(clear_module_state->__pyx_n_s_number_of_warm_start);
+  Py_CLEAR(clear_module_state->__pyx_kp_s_number_of_warm_start_2);
   Py_CLEAR(clear_module_state->__pyx_n_s_numpy);
   Py_CLEAR(clear_module_state->__pyx_n_s_object);
   Py_CLEAR(clear_module_state->__pyx_n_s_open);
@@ -3249,6 +3281,7 @@ static int __pyx_m_clear(PyObject *m) {
   Py_CLEAR(clear_module_state->__pyx_n_s_qualname);
   Py_CLEAR(clear_module_state->__pyx_n_s_r);
   Py_CLEAR(clear_module_state->__pyx_n_s_range);
+  Py_CLEAR(clear_module_state->__pyx_n_s_result);
   Py_CLEAR(clear_module_state->__pyx_n_s_round);
   Py_CLEAR(clear_module_state->__pyx_n_s_save);
   Py_CLEAR(clear_module_state->__pyx_n_s_scenario_stats);
@@ -3361,6 +3394,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   #endif
   Py_VISIT(traverse_module_state->__pyx_kp_s_);
   Py_VISIT(traverse_module_state->__pyx_kp_u_2f);
+  Py_VISIT(traverse_module_state->__pyx_n_s_ARIMA);
+  Py_VISIT(traverse_module_state->__pyx_n_s_ARIMA_IT_dist_keep_alive_scenari);
   Py_VISIT(traverse_module_state->__pyx_kp_u_ARIMA_preficted_next_IT);
   Py_VISIT(traverse_module_state->__pyx_n_s_Application);
   Py_VISIT(traverse_module_state->__pyx_kp_s_Enter_ARIMA_Branch);
@@ -3371,11 +3406,14 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_kp_u_HashApp);
   Py_VISIT(traverse_module_state->__pyx_kp_u_HashFunction);
   Py_VISIT(traverse_module_state->__pyx_n_s_IT_behavior_change);
-  Py_VISIT(traverse_module_state->__pyx_kp_s_Maximum_memory_usage);
+  Py_VISIT(traverse_module_state->__pyx_n_s_IT_dist);
+  Py_VISIT(traverse_module_state->__pyx_n_s_Maximum_memory_usage);
+  Py_VISIT(traverse_module_state->__pyx_kp_s_Maximum_memory_usage_2);
   Py_VISIT(traverse_module_state->__pyx_n_s_OOB_apps);
   Py_VISIT(traverse_module_state->__pyx_n_s_OOB_apps_list);
   Py_VISIT(traverse_module_state->__pyx_n_s_OOB_duration);
-  Py_VISIT(traverse_module_state->__pyx_kp_s_Simulation_time);
+  Py_VISIT(traverse_module_state->__pyx_n_s_Simulation_time);
+  Py_VISIT(traverse_module_state->__pyx_kp_s_Simulation_time_2);
   Py_VISIT(traverse_module_state->__pyx_n_s_Simulator);
   Py_VISIT(traverse_module_state->__pyx_n_s_Simulator___init);
   Py_VISIT(traverse_module_state->__pyx_n_s_Simulator___init___locals_lambda);
@@ -3417,7 +3455,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_kp_u_cold_start);
   Py_VISIT(traverse_module_state->__pyx_n_s_cold_start_2);
   Py_VISIT(traverse_module_state->__pyx_n_s_cold_start_list);
-  Py_VISIT(traverse_module_state->__pyx_kp_s_cold_start_rate);
+  Py_VISIT(traverse_module_state->__pyx_n_s_cold_start_rate);
+  Py_VISIT(traverse_module_state->__pyx_kp_s_cold_start_rate_2);
   Py_VISIT(traverse_module_state->__pyx_n_u_cold_start_rate_distribution);
   Py_VISIT(traverse_module_state->__pyx_n_s_cold_start_rate_list);
   Py_VISIT(traverse_module_state->__pyx_n_s_cold_start_total);
@@ -3475,6 +3514,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_is_coroutine);
   Py_VISIT(traverse_module_state->__pyx_kp_u_json);
   Py_VISIT(traverse_module_state->__pyx_n_s_json_2);
+  Py_VISIT(traverse_module_state->__pyx_n_s_keep_alive);
   Py_VISIT(traverse_module_state->__pyx_kp_s_keep_alive_window);
   Py_VISIT(traverse_module_state->__pyx_n_s_keep_alive_window_2);
   Py_VISIT(traverse_module_state->__pyx_n_s_keep_live_time);
@@ -3493,7 +3533,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_mean);
   Py_VISIT(traverse_module_state->__pyx_n_s_mean_pre);
   Py_VISIT(traverse_module_state->__pyx_n_s_mean_pre_pre);
-  Py_VISIT(traverse_module_state->__pyx_kp_s_memory_waste_time);
+  Py_VISIT(traverse_module_state->__pyx_n_s_memory_waste_time);
+  Py_VISIT(traverse_module_state->__pyx_kp_s_memory_waste_time_2);
   Py_VISIT(traverse_module_state->__pyx_n_s_metaclass);
   Py_VISIT(traverse_module_state->__pyx_n_s_model_selection);
   Py_VISIT(traverse_module_state->__pyx_n_s_module);
@@ -3505,8 +3546,10 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_kp_u_npy);
   Py_VISIT(traverse_module_state->__pyx_n_s_number);
   Py_VISIT(traverse_module_state->__pyx_kp_u_number_of_ARIMA_IT_dist_keep_ali);
-  Py_VISIT(traverse_module_state->__pyx_kp_s_number_of_cold_start);
-  Py_VISIT(traverse_module_state->__pyx_kp_s_number_of_warm_start);
+  Py_VISIT(traverse_module_state->__pyx_n_s_number_of_cold_start);
+  Py_VISIT(traverse_module_state->__pyx_kp_s_number_of_cold_start_2);
+  Py_VISIT(traverse_module_state->__pyx_n_s_number_of_warm_start);
+  Py_VISIT(traverse_module_state->__pyx_kp_s_number_of_warm_start_2);
   Py_VISIT(traverse_module_state->__pyx_n_s_numpy);
   Py_VISIT(traverse_module_state->__pyx_n_s_object);
   Py_VISIT(traverse_module_state->__pyx_n_s_open);
@@ -3540,6 +3583,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
   Py_VISIT(traverse_module_state->__pyx_n_s_qualname);
   Py_VISIT(traverse_module_state->__pyx_n_s_r);
   Py_VISIT(traverse_module_state->__pyx_n_s_range);
+  Py_VISIT(traverse_module_state->__pyx_n_s_result);
   Py_VISIT(traverse_module_state->__pyx_n_s_round);
   Py_VISIT(traverse_module_state->__pyx_n_s_save);
   Py_VISIT(traverse_module_state->__pyx_n_s_scenario_stats);
@@ -3662,6 +3706,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #endif
 #define __pyx_kp_s_ __pyx_mstate_global->__pyx_kp_s_
 #define __pyx_kp_u_2f __pyx_mstate_global->__pyx_kp_u_2f
+#define __pyx_n_s_ARIMA __pyx_mstate_global->__pyx_n_s_ARIMA
+#define __pyx_n_s_ARIMA_IT_dist_keep_alive_scenari __pyx_mstate_global->__pyx_n_s_ARIMA_IT_dist_keep_alive_scenari
 #define __pyx_kp_u_ARIMA_preficted_next_IT __pyx_mstate_global->__pyx_kp_u_ARIMA_preficted_next_IT
 #define __pyx_n_s_Application __pyx_mstate_global->__pyx_n_s_Application
 #define __pyx_kp_s_Enter_ARIMA_Branch __pyx_mstate_global->__pyx_kp_s_Enter_ARIMA_Branch
@@ -3672,11 +3718,14 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_kp_u_HashApp __pyx_mstate_global->__pyx_kp_u_HashApp
 #define __pyx_kp_u_HashFunction __pyx_mstate_global->__pyx_kp_u_HashFunction
 #define __pyx_n_s_IT_behavior_change __pyx_mstate_global->__pyx_n_s_IT_behavior_change
-#define __pyx_kp_s_Maximum_memory_usage __pyx_mstate_global->__pyx_kp_s_Maximum_memory_usage
+#define __pyx_n_s_IT_dist __pyx_mstate_global->__pyx_n_s_IT_dist
+#define __pyx_n_s_Maximum_memory_usage __pyx_mstate_global->__pyx_n_s_Maximum_memory_usage
+#define __pyx_kp_s_Maximum_memory_usage_2 __pyx_mstate_global->__pyx_kp_s_Maximum_memory_usage_2
 #define __pyx_n_s_OOB_apps __pyx_mstate_global->__pyx_n_s_OOB_apps
 #define __pyx_n_s_OOB_apps_list __pyx_mstate_global->__pyx_n_s_OOB_apps_list
 #define __pyx_n_s_OOB_duration __pyx_mstate_global->__pyx_n_s_OOB_duration
-#define __pyx_kp_s_Simulation_time __pyx_mstate_global->__pyx_kp_s_Simulation_time
+#define __pyx_n_s_Simulation_time __pyx_mstate_global->__pyx_n_s_Simulation_time
+#define __pyx_kp_s_Simulation_time_2 __pyx_mstate_global->__pyx_kp_s_Simulation_time_2
 #define __pyx_n_s_Simulator __pyx_mstate_global->__pyx_n_s_Simulator
 #define __pyx_n_s_Simulator___init __pyx_mstate_global->__pyx_n_s_Simulator___init
 #define __pyx_n_s_Simulator___init___locals_lambda __pyx_mstate_global->__pyx_n_s_Simulator___init___locals_lambda
@@ -3718,7 +3767,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_kp_u_cold_start __pyx_mstate_global->__pyx_kp_u_cold_start
 #define __pyx_n_s_cold_start_2 __pyx_mstate_global->__pyx_n_s_cold_start_2
 #define __pyx_n_s_cold_start_list __pyx_mstate_global->__pyx_n_s_cold_start_list
-#define __pyx_kp_s_cold_start_rate __pyx_mstate_global->__pyx_kp_s_cold_start_rate
+#define __pyx_n_s_cold_start_rate __pyx_mstate_global->__pyx_n_s_cold_start_rate
+#define __pyx_kp_s_cold_start_rate_2 __pyx_mstate_global->__pyx_kp_s_cold_start_rate_2
 #define __pyx_n_u_cold_start_rate_distribution __pyx_mstate_global->__pyx_n_u_cold_start_rate_distribution
 #define __pyx_n_s_cold_start_rate_list __pyx_mstate_global->__pyx_n_s_cold_start_rate_list
 #define __pyx_n_s_cold_start_total __pyx_mstate_global->__pyx_n_s_cold_start_total
@@ -3776,6 +3826,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_is_coroutine __pyx_mstate_global->__pyx_n_s_is_coroutine
 #define __pyx_kp_u_json __pyx_mstate_global->__pyx_kp_u_json
 #define __pyx_n_s_json_2 __pyx_mstate_global->__pyx_n_s_json_2
+#define __pyx_n_s_keep_alive __pyx_mstate_global->__pyx_n_s_keep_alive
 #define __pyx_kp_s_keep_alive_window __pyx_mstate_global->__pyx_kp_s_keep_alive_window
 #define __pyx_n_s_keep_alive_window_2 __pyx_mstate_global->__pyx_n_s_keep_alive_window_2
 #define __pyx_n_s_keep_live_time __pyx_mstate_global->__pyx_n_s_keep_live_time
@@ -3794,7 +3845,8 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_mean __pyx_mstate_global->__pyx_n_s_mean
 #define __pyx_n_s_mean_pre __pyx_mstate_global->__pyx_n_s_mean_pre
 #define __pyx_n_s_mean_pre_pre __pyx_mstate_global->__pyx_n_s_mean_pre_pre
-#define __pyx_kp_s_memory_waste_time __pyx_mstate_global->__pyx_kp_s_memory_waste_time
+#define __pyx_n_s_memory_waste_time __pyx_mstate_global->__pyx_n_s_memory_waste_time
+#define __pyx_kp_s_memory_waste_time_2 __pyx_mstate_global->__pyx_kp_s_memory_waste_time_2
 #define __pyx_n_s_metaclass __pyx_mstate_global->__pyx_n_s_metaclass
 #define __pyx_n_s_model_selection __pyx_mstate_global->__pyx_n_s_model_selection
 #define __pyx_n_s_module __pyx_mstate_global->__pyx_n_s_module
@@ -3806,8 +3858,10 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_kp_u_npy __pyx_mstate_global->__pyx_kp_u_npy
 #define __pyx_n_s_number __pyx_mstate_global->__pyx_n_s_number
 #define __pyx_kp_u_number_of_ARIMA_IT_dist_keep_ali __pyx_mstate_global->__pyx_kp_u_number_of_ARIMA_IT_dist_keep_ali
-#define __pyx_kp_s_number_of_cold_start __pyx_mstate_global->__pyx_kp_s_number_of_cold_start
-#define __pyx_kp_s_number_of_warm_start __pyx_mstate_global->__pyx_kp_s_number_of_warm_start
+#define __pyx_n_s_number_of_cold_start __pyx_mstate_global->__pyx_n_s_number_of_cold_start
+#define __pyx_kp_s_number_of_cold_start_2 __pyx_mstate_global->__pyx_kp_s_number_of_cold_start_2
+#define __pyx_n_s_number_of_warm_start __pyx_mstate_global->__pyx_n_s_number_of_warm_start
+#define __pyx_kp_s_number_of_warm_start_2 __pyx_mstate_global->__pyx_kp_s_number_of_warm_start_2
 #define __pyx_n_s_numpy __pyx_mstate_global->__pyx_n_s_numpy
 #define __pyx_n_s_object __pyx_mstate_global->__pyx_n_s_object
 #define __pyx_n_s_open __pyx_mstate_global->__pyx_n_s_open
@@ -3841,6 +3895,7 @@ static int __pyx_m_traverse(PyObject *m, visitproc visit, void *arg) {
 #define __pyx_n_s_qualname __pyx_mstate_global->__pyx_n_s_qualname
 #define __pyx_n_s_r __pyx_mstate_global->__pyx_n_s_r
 #define __pyx_n_s_range __pyx_mstate_global->__pyx_n_s_range
+#define __pyx_n_s_result __pyx_mstate_global->__pyx_n_s_result
 #define __pyx_n_s_round __pyx_mstate_global->__pyx_n_s_round
 #define __pyx_n_s_save __pyx_mstate_global->__pyx_n_s_save
 #define __pyx_n_s_scenario_stats __pyx_mstate_global->__pyx_n_s_scenario_stats
@@ -10855,6 +10910,7 @@ static PyObject *__pyx_pf_15hybrid_policy_c_2main(CYTHON_UNUSED PyObject *__pyx_
   PyObject *__pyx_v_app_id_str = NULL;
   PyObject *__pyx_v_cold_start = NULL;
   PyObject *__pyx_v_warm_start = NULL;
+  PyObject *__pyx_v_result = NULL;
   PyObject *__pyx_r = NULL;
   __Pyx_RefNannyDeclarations
   PyObject *__pyx_t_1 = NULL;
@@ -11229,8 +11285,8 @@ static PyObject *__pyx_pf_15hybrid_policy_c_2main(CYTHON_UNUSED PyObject *__pyx_
  *             cold_start_rate_list.append(cold_start/(cold_start+warm_start))
  * 
  *     cold_start_rate_list = np.array(cold_start_rate_list)             # <<<<<<<<<<<<<<
- *     np.save(f"cold_start_rate_distribution_{kwargs['app']}_{kwargs['pt1']}_{kwargs['pt2']}_{kwargs['window_period']}.npy", cold_start_rate_list)
- * 
+ *     result = {
+ *         "ARIMA_IT_dist_keep_alive_scenario": {
  */
   __Pyx_GetModuleGlobalName(__pyx_t_4, __pyx_n_s_np); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 345, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
@@ -11262,140 +11318,297 @@ static PyObject *__pyx_pf_15hybrid_policy_c_2main(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_DECREF_SET(__pyx_v_cold_start_rate_list, __pyx_t_7);
   __pyx_t_7 = 0;
 
-  /* "hybrid_policy_c.pyx":346
- * 
+  /* "hybrid_policy_c.pyx":347
  *     cold_start_rate_list = np.array(cold_start_rate_list)
- *     np.save(f"cold_start_rate_distribution_{kwargs['app']}_{kwargs['pt1']}_{kwargs['pt2']}_{kwargs['window_period']}.npy", cold_start_rate_list)             # <<<<<<<<<<<<<<
+ *     result = {
+ *         "ARIMA_IT_dist_keep_alive_scenario": {             # <<<<<<<<<<<<<<
+ *             "ARIMA": simulator.scenario_stats[0]/n*100,
+ *             "IT_dist": simulator.scenario_stats[1]/n*100,
+ */
+  __pyx_t_7 = __Pyx_PyDict_NewPresized(8); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 347, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_7);
+
+  /* "hybrid_policy_c.pyx":348
+ *     result = {
+ *         "ARIMA_IT_dist_keep_alive_scenario": {
+ *             "ARIMA": simulator.scenario_stats[0]/n*100,             # <<<<<<<<<<<<<<
+ *             "IT_dist": simulator.scenario_stats[1]/n*100,
+ *             "keep_alive": simulator.scenario_stats[2]/n*100
+ */
+  __pyx_t_1 = __Pyx_PyDict_NewPresized(3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_simulator, __pyx_n_s_scenario_stats); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_4, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __pyx_t_4 = __Pyx_PyNumber_Divide(__pyx_t_5, __pyx_v_n); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_5 = __Pyx_PyInt_MultiplyObjC(__pyx_t_4, __pyx_int_100, 0x64, 0, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 348, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_ARIMA, __pyx_t_5) < 0) __PYX_ERR(0, 348, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+
+  /* "hybrid_policy_c.pyx":349
+ *         "ARIMA_IT_dist_keep_alive_scenario": {
+ *             "ARIMA": simulator.scenario_stats[0]/n*100,
+ *             "IT_dist": simulator.scenario_stats[1]/n*100,             # <<<<<<<<<<<<<<
+ *             "keep_alive": simulator.scenario_stats[2]/n*100
+ *         },
+ */
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_simulator, __pyx_n_s_scenario_stats); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_5, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_5 = __Pyx_PyNumber_Divide(__pyx_t_4, __pyx_v_n); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __pyx_t_4 = __Pyx_PyInt_MultiplyObjC(__pyx_t_5, __pyx_int_100, 0x64, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_IT_dist, __pyx_t_4) < 0) __PYX_ERR(0, 348, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+
+  /* "hybrid_policy_c.pyx":350
+ *             "ARIMA": simulator.scenario_stats[0]/n*100,
+ *             "IT_dist": simulator.scenario_stats[1]/n*100,
+ *             "keep_alive": simulator.scenario_stats[2]/n*100             # <<<<<<<<<<<<<<
+ *         },
+ *         "number_of_cold_start": cold_start_total,
+ */
+  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_simulator, __pyx_n_s_scenario_stats); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 350, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_4, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 350, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __pyx_t_4 = __Pyx_PyNumber_Divide(__pyx_t_5, __pyx_v_n); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 350, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_5 = __Pyx_PyInt_MultiplyObjC(__pyx_t_4, __pyx_int_100, 0x64, 0, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 350, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  if (PyDict_SetItem(__pyx_t_1, __pyx_n_s_keep_alive, __pyx_t_5) < 0) __PYX_ERR(0, 348, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_ARIMA_IT_dist_keep_alive_scenari, __pyx_t_1) < 0) __PYX_ERR(0, 347, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+
+  /* "hybrid_policy_c.pyx":352
+ *             "keep_alive": simulator.scenario_stats[2]/n*100
+ *         },
+ *         "number_of_cold_start": cold_start_total,             # <<<<<<<<<<<<<<
+ *         "number_of_warm_start": warm_start_total,
+ *         "cold_start_rate": cold_start_total/(cold_start_total + warm_start_total),
+ */
+  if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_number_of_cold_start, __pyx_v_cold_start_total) < 0) __PYX_ERR(0, 347, __pyx_L1_error)
+
+  /* "hybrid_policy_c.pyx":353
+ *         },
+ *         "number_of_cold_start": cold_start_total,
+ *         "number_of_warm_start": warm_start_total,             # <<<<<<<<<<<<<<
+ *         "cold_start_rate": cold_start_total/(cold_start_total + warm_start_total),
+ *         "Maximum_memory_usage": simulator.max_memory,
+ */
+  if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_number_of_warm_start, __pyx_v_warm_start_total) < 0) __PYX_ERR(0, 347, __pyx_L1_error)
+
+  /* "hybrid_policy_c.pyx":354
+ *         "number_of_cold_start": cold_start_total,
+ *         "number_of_warm_start": warm_start_total,
+ *         "cold_start_rate": cold_start_total/(cold_start_total + warm_start_total),             # <<<<<<<<<<<<<<
+ *         "Maximum_memory_usage": simulator.max_memory,
+ *         "memory_waste_time": simulator.wasted_memory_time,
+ */
+  __pyx_t_1 = PyNumber_Add(__pyx_v_cold_start_total, __pyx_v_warm_start_total); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 354, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_5 = __Pyx_PyNumber_Divide(__pyx_v_cold_start_total, __pyx_t_1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 354, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_cold_start_rate, __pyx_t_5) < 0) __PYX_ERR(0, 347, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+
+  /* "hybrid_policy_c.pyx":355
+ *         "number_of_warm_start": warm_start_total,
+ *         "cold_start_rate": cold_start_total/(cold_start_total + warm_start_total),
+ *         "Maximum_memory_usage": simulator.max_memory,             # <<<<<<<<<<<<<<
+ *         "memory_waste_time": simulator.wasted_memory_time,
+ *         "Simulation_time": simulator.simulation_time,
+ */
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_simulator, __pyx_n_s_max_memory); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 355, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_Maximum_memory_usage, __pyx_t_5) < 0) __PYX_ERR(0, 347, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+
+  /* "hybrid_policy_c.pyx":356
+ *         "cold_start_rate": cold_start_total/(cold_start_total + warm_start_total),
+ *         "Maximum_memory_usage": simulator.max_memory,
+ *         "memory_waste_time": simulator.wasted_memory_time,             # <<<<<<<<<<<<<<
+ *         "Simulation_time": simulator.simulation_time,
+ *         "cold_start_rate_list": cold_start_rate_list
+ */
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_simulator, __pyx_n_s_wasted_memory_time); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 356, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_memory_waste_time, __pyx_t_5) < 0) __PYX_ERR(0, 347, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+
+  /* "hybrid_policy_c.pyx":357
+ *         "Maximum_memory_usage": simulator.max_memory,
+ *         "memory_waste_time": simulator.wasted_memory_time,
+ *         "Simulation_time": simulator.simulation_time,             # <<<<<<<<<<<<<<
+ *         "cold_start_rate_list": cold_start_rate_list
+ *     }
+ */
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_simulator, __pyx_n_s_simulation_time); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 357, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_Simulation_time, __pyx_t_5) < 0) __PYX_ERR(0, 347, __pyx_L1_error)
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+
+  /* "hybrid_policy_c.pyx":358
+ *         "memory_waste_time": simulator.wasted_memory_time,
+ *         "Simulation_time": simulator.simulation_time,
+ *         "cold_start_rate_list": cold_start_rate_list             # <<<<<<<<<<<<<<
+ *     }
+ *     # np.save(f"cold_start_rate_distribution_{kwargs['app']}_{kwargs['pt1']}_{kwargs['pt2']}_{kwargs['window_period']}.npy", cold_start_rate_list)
+ */
+  if (PyDict_SetItem(__pyx_t_7, __pyx_n_s_cold_start_rate_list, __pyx_v_cold_start_rate_list) < 0) __PYX_ERR(0, 347, __pyx_L1_error)
+  __pyx_v_result = ((PyObject*)__pyx_t_7);
+  __pyx_t_7 = 0;
+
+  /* "hybrid_policy_c.pyx":361
+ *     }
+ *     # np.save(f"cold_start_rate_distribution_{kwargs['app']}_{kwargs['pt1']}_{kwargs['pt2']}_{kwargs['window_period']}.npy", cold_start_rate_list)
+ *     np.save(f"cold_start_rate_distribution_{kwargs['app']}_{kwargs['pt1']}_{kwargs['pt2']}_{kwargs['window_period']}.npy", result)             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_1, __pyx_n_s_np); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_5, __pyx_n_s_np); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 361, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_t_5, __pyx_n_s_save); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 361, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_t_1, __pyx_n_s_save); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 346, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = PyTuple_New(9); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 346, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_5 = PyTuple_New(9); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 361, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
   __pyx_t_2 = 0;
   __pyx_t_3 = 127;
   __Pyx_INCREF(__pyx_n_u_cold_start_rate_distribution);
   __pyx_t_2 += 29;
   __Pyx_GIVEREF(__pyx_n_u_cold_start_rate_distribution);
-  PyTuple_SET_ITEM(__pyx_t_1, 0, __pyx_n_u_cold_start_rate_distribution);
-  __pyx_t_5 = __Pyx_PyDict_GetItem(__pyx_v_kwargs, __pyx_n_s_app); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 346, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_11 = __Pyx_PyObject_FormatSimple(__pyx_t_5, __pyx_empty_unicode); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 346, __pyx_L1_error)
+  PyTuple_SET_ITEM(__pyx_t_5, 0, __pyx_n_u_cold_start_rate_distribution);
+  __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_kwargs, __pyx_n_s_app); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 361, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_11 = __Pyx_PyObject_FormatSimple(__pyx_t_4, __pyx_empty_unicode); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 361, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_3 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_11) > __pyx_t_3) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_11) : __pyx_t_3;
   __pyx_t_2 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_11);
   __Pyx_GIVEREF(__pyx_t_11);
-  PyTuple_SET_ITEM(__pyx_t_1, 1, __pyx_t_11);
+  PyTuple_SET_ITEM(__pyx_t_5, 1, __pyx_t_11);
   __pyx_t_11 = 0;
   __Pyx_INCREF(__pyx_n_u__14);
   __pyx_t_2 += 1;
   __Pyx_GIVEREF(__pyx_n_u__14);
-  PyTuple_SET_ITEM(__pyx_t_1, 2, __pyx_n_u__14);
-  __pyx_t_11 = __Pyx_PyDict_GetItem(__pyx_v_kwargs, __pyx_n_s_pt1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 346, __pyx_L1_error)
+  PyTuple_SET_ITEM(__pyx_t_5, 2, __pyx_n_u__14);
+  __pyx_t_11 = __Pyx_PyDict_GetItem(__pyx_v_kwargs, __pyx_n_s_pt1); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 361, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_5 = __Pyx_PyObject_FormatSimple(__pyx_t_11, __pyx_empty_unicode); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 346, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_4 = __Pyx_PyObject_FormatSimple(__pyx_t_11, __pyx_empty_unicode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 361, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-  __pyx_t_3 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_5) > __pyx_t_3) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_5) : __pyx_t_3;
-  __pyx_t_2 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_5);
-  __Pyx_GIVEREF(__pyx_t_5);
-  PyTuple_SET_ITEM(__pyx_t_1, 3, __pyx_t_5);
-  __pyx_t_5 = 0;
+  __pyx_t_3 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) > __pyx_t_3) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) : __pyx_t_3;
+  __pyx_t_2 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_4);
+  __Pyx_GIVEREF(__pyx_t_4);
+  PyTuple_SET_ITEM(__pyx_t_5, 3, __pyx_t_4);
+  __pyx_t_4 = 0;
   __Pyx_INCREF(__pyx_n_u__14);
   __pyx_t_2 += 1;
   __Pyx_GIVEREF(__pyx_n_u__14);
-  PyTuple_SET_ITEM(__pyx_t_1, 4, __pyx_n_u__14);
-  __pyx_t_5 = __Pyx_PyDict_GetItem(__pyx_v_kwargs, __pyx_n_s_pt2); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 346, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_11 = __Pyx_PyObject_FormatSimple(__pyx_t_5, __pyx_empty_unicode); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 346, __pyx_L1_error)
+  PyTuple_SET_ITEM(__pyx_t_5, 4, __pyx_n_u__14);
+  __pyx_t_4 = __Pyx_PyDict_GetItem(__pyx_v_kwargs, __pyx_n_s_pt2); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 361, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_11 = __Pyx_PyObject_FormatSimple(__pyx_t_4, __pyx_empty_unicode); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 361, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
   __pyx_t_3 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_11) > __pyx_t_3) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_11) : __pyx_t_3;
   __pyx_t_2 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_11);
   __Pyx_GIVEREF(__pyx_t_11);
-  PyTuple_SET_ITEM(__pyx_t_1, 5, __pyx_t_11);
+  PyTuple_SET_ITEM(__pyx_t_5, 5, __pyx_t_11);
   __pyx_t_11 = 0;
   __Pyx_INCREF(__pyx_n_u__14);
   __pyx_t_2 += 1;
   __Pyx_GIVEREF(__pyx_n_u__14);
-  PyTuple_SET_ITEM(__pyx_t_1, 6, __pyx_n_u__14);
-  __pyx_t_11 = __Pyx_PyDict_GetItem(__pyx_v_kwargs, __pyx_n_s_window_period); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 346, __pyx_L1_error)
+  PyTuple_SET_ITEM(__pyx_t_5, 6, __pyx_n_u__14);
+  __pyx_t_11 = __Pyx_PyDict_GetItem(__pyx_v_kwargs, __pyx_n_s_window_period); if (unlikely(!__pyx_t_11)) __PYX_ERR(0, 361, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_11);
-  __pyx_t_5 = __Pyx_PyObject_FormatSimple(__pyx_t_11, __pyx_empty_unicode); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 346, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_4 = __Pyx_PyObject_FormatSimple(__pyx_t_11, __pyx_empty_unicode); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 361, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
   __Pyx_DECREF(__pyx_t_11); __pyx_t_11 = 0;
-  __pyx_t_3 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_5) > __pyx_t_3) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_5) : __pyx_t_3;
-  __pyx_t_2 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_5);
-  __Pyx_GIVEREF(__pyx_t_5);
-  PyTuple_SET_ITEM(__pyx_t_1, 7, __pyx_t_5);
-  __pyx_t_5 = 0;
+  __pyx_t_3 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) > __pyx_t_3) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) : __pyx_t_3;
+  __pyx_t_2 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_4);
+  __Pyx_GIVEREF(__pyx_t_4);
+  PyTuple_SET_ITEM(__pyx_t_5, 7, __pyx_t_4);
+  __pyx_t_4 = 0;
   __Pyx_INCREF(__pyx_kp_u_npy);
   __pyx_t_2 += 4;
   __Pyx_GIVEREF(__pyx_kp_u_npy);
-  PyTuple_SET_ITEM(__pyx_t_1, 8, __pyx_kp_u_npy);
-  __pyx_t_5 = __Pyx_PyUnicode_Join(__pyx_t_1, 9, __pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 346, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-  __pyx_t_1 = NULL;
+  PyTuple_SET_ITEM(__pyx_t_5, 8, __pyx_kp_u_npy);
+  __pyx_t_4 = __Pyx_PyUnicode_Join(__pyx_t_5, 9, __pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 361, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+  __pyx_t_5 = NULL;
   __pyx_t_6 = 0;
   #if CYTHON_UNPACK_METHODS
-  if (unlikely(PyMethod_Check(__pyx_t_4))) {
-    __pyx_t_1 = PyMethod_GET_SELF(__pyx_t_4);
-    if (likely(__pyx_t_1)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-      __Pyx_INCREF(__pyx_t_1);
+  if (unlikely(PyMethod_Check(__pyx_t_1))) {
+    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_1);
+    if (likely(__pyx_t_5)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
+      __Pyx_INCREF(__pyx_t_5);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_4, function);
+      __Pyx_DECREF_SET(__pyx_t_1, function);
       __pyx_t_6 = 1;
     }
   }
   #endif
   {
-    PyObject *__pyx_callargs[3] = {__pyx_t_1, __pyx_t_5, __pyx_v_cold_start_rate_list};
-    __pyx_t_7 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 2+__pyx_t_6);
-    __Pyx_XDECREF(__pyx_t_1); __pyx_t_1 = 0;
-    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 346, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_7);
+    PyObject *__pyx_callargs[3] = {__pyx_t_5, __pyx_t_4, __pyx_v_result};
+    __pyx_t_7 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_6, 2+__pyx_t_6);
+    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
     __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 361, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_7);
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "hybrid_policy_c.pyx":349
+  /* "hybrid_policy_c.pyx":364
  * 
  * 
  *     print("\n")             # <<<<<<<<<<<<<<
  *     print("----------------------------------------------------")
  *     print(f"number of ARIMA / IT dist / keep alive scenario: {simulator.scenario_stats[0]/n*100:.2f}% / {simulator.scenario_stats[1]/n*100:.2f}% / {simulator.scenario_stats[2]/n*100:.2f}%")
  */
-  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 349, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__2, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 364, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "hybrid_policy_c.pyx":350
+  /* "hybrid_policy_c.pyx":365
  * 
  *     print("\n")
  *     print("----------------------------------------------------")             # <<<<<<<<<<<<<<
  *     print(f"number of ARIMA / IT dist / keep alive scenario: {simulator.scenario_stats[0]/n*100:.2f}% / {simulator.scenario_stats[1]/n*100:.2f}% / {simulator.scenario_stats[2]/n*100:.2f}%")
  *     print("number of cold start: {}".format(cold_start_total))
  */
-  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__16, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 350, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__16, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 365, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "hybrid_policy_c.pyx":351
+  /* "hybrid_policy_c.pyx":366
  *     print("\n")
  *     print("----------------------------------------------------")
  *     print(f"number of ARIMA / IT dist / keep alive scenario: {simulator.scenario_stats[0]/n*100:.2f}% / {simulator.scenario_stats[1]/n*100:.2f}% / {simulator.scenario_stats[2]/n*100:.2f}%")             # <<<<<<<<<<<<<<
  *     print("number of cold start: {}".format(cold_start_total))
  *     print("number of warm start: {}".format(warm_start_total))
  */
-  __pyx_t_7 = PyTuple_New(7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 351, __pyx_L1_error)
+  __pyx_t_7 = PyTuple_New(7); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 366, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __pyx_t_2 = 0;
   __pyx_t_3 = 127;
@@ -11403,136 +11616,136 @@ static PyObject *__pyx_pf_15hybrid_policy_c_2main(CYTHON_UNUSED PyObject *__pyx_
   __pyx_t_2 += 49;
   __Pyx_GIVEREF(__pyx_kp_u_number_of_ARIMA_IT_dist_keep_ali);
   PyTuple_SET_ITEM(__pyx_t_7, 0, __pyx_kp_u_number_of_ARIMA_IT_dist_keep_ali);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_simulator, __pyx_n_s_scenario_stats); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 351, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_simulator, __pyx_n_s_scenario_stats); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_1, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 366, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_4, 0, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 351, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_t_4, __pyx_v_n); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyNumber_Divide(__pyx_t_5, __pyx_v_n); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 351, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_MultiplyObjC(__pyx_t_1, __pyx_int_100, 0x64, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 366, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_MultiplyObjC(__pyx_t_4, __pyx_int_100, 0x64, 0, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 351, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_PyObject_Format(__pyx_t_4, __pyx_kp_u_2f); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Format(__pyx_t_5, __pyx_kp_u_2f); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 351, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_3 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) > __pyx_t_3) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) : __pyx_t_3;
-  __pyx_t_2 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_4);
-  __Pyx_GIVEREF(__pyx_t_4);
-  PyTuple_SET_ITEM(__pyx_t_7, 1, __pyx_t_4);
-  __pyx_t_4 = 0;
+  __pyx_t_3 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_1) > __pyx_t_3) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_1) : __pyx_t_3;
+  __pyx_t_2 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_1);
+  __Pyx_GIVEREF(__pyx_t_1);
+  PyTuple_SET_ITEM(__pyx_t_7, 1, __pyx_t_1);
+  __pyx_t_1 = 0;
   __Pyx_INCREF(__pyx_kp_u__12);
   __pyx_t_2 += 4;
   __Pyx_GIVEREF(__pyx_kp_u__12);
   PyTuple_SET_ITEM(__pyx_t_7, 2, __pyx_kp_u__12);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_simulator, __pyx_n_s_scenario_stats); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 351, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_simulator, __pyx_n_s_scenario_stats); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_1, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 366, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_4, 1, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 351, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_t_4, __pyx_v_n); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyNumber_Divide(__pyx_t_5, __pyx_v_n); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 351, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_MultiplyObjC(__pyx_t_1, __pyx_int_100, 0x64, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 366, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_MultiplyObjC(__pyx_t_4, __pyx_int_100, 0x64, 0, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 351, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_PyObject_Format(__pyx_t_4, __pyx_kp_u_2f); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Format(__pyx_t_5, __pyx_kp_u_2f); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 351, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_3 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) > __pyx_t_3) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) : __pyx_t_3;
-  __pyx_t_2 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_4);
-  __Pyx_GIVEREF(__pyx_t_4);
-  PyTuple_SET_ITEM(__pyx_t_7, 3, __pyx_t_4);
-  __pyx_t_4 = 0;
+  __pyx_t_3 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_1) > __pyx_t_3) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_1) : __pyx_t_3;
+  __pyx_t_2 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_1);
+  __Pyx_GIVEREF(__pyx_t_1);
+  PyTuple_SET_ITEM(__pyx_t_7, 3, __pyx_t_1);
+  __pyx_t_1 = 0;
   __Pyx_INCREF(__pyx_kp_u__12);
   __pyx_t_2 += 4;
   __Pyx_GIVEREF(__pyx_kp_u__12);
   PyTuple_SET_ITEM(__pyx_t_7, 4, __pyx_kp_u__12);
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_v_simulator, __pyx_n_s_scenario_stats); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 351, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_simulator, __pyx_n_s_scenario_stats); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_4 = __Pyx_GetItemInt(__pyx_t_1, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 366, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = __Pyx_GetItemInt(__pyx_t_4, 2, long, 1, __Pyx_PyInt_From_long, 0, 0, 1); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 351, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_t_4, __pyx_v_n); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyNumber_Divide(__pyx_t_5, __pyx_v_n); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 351, __pyx_L1_error)
+  __pyx_t_4 = __Pyx_PyInt_MultiplyObjC(__pyx_t_1, __pyx_int_100, 0x64, 0, 0); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 366, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = __Pyx_PyInt_MultiplyObjC(__pyx_t_4, __pyx_int_100, 0x64, 0, 0); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 351, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
+  __pyx_t_1 = __Pyx_PyObject_Format(__pyx_t_4, __pyx_kp_u_2f); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
-  __pyx_t_4 = __Pyx_PyObject_Format(__pyx_t_5, __pyx_kp_u_2f); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 351, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_3 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) > __pyx_t_3) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_4) : __pyx_t_3;
-  __pyx_t_2 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_4);
-  __Pyx_GIVEREF(__pyx_t_4);
-  PyTuple_SET_ITEM(__pyx_t_7, 5, __pyx_t_4);
-  __pyx_t_4 = 0;
+  __pyx_t_3 = (__Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_1) > __pyx_t_3) ? __Pyx_PyUnicode_MAX_CHAR_VALUE(__pyx_t_1) : __pyx_t_3;
+  __pyx_t_2 += __Pyx_PyUnicode_GET_LENGTH(__pyx_t_1);
+  __Pyx_GIVEREF(__pyx_t_1);
+  PyTuple_SET_ITEM(__pyx_t_7, 5, __pyx_t_1);
+  __pyx_t_1 = 0;
   __Pyx_INCREF(__pyx_kp_u__13);
   __pyx_t_2 += 1;
   __Pyx_GIVEREF(__pyx_kp_u__13);
   PyTuple_SET_ITEM(__pyx_t_7, 6, __pyx_kp_u__13);
-  __pyx_t_4 = __Pyx_PyUnicode_Join(__pyx_t_7, 7, __pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 351, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_1 = __Pyx_PyUnicode_Join(__pyx_t_7, 7, __pyx_t_2, __pyx_t_3); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 366, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 351, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 366, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "hybrid_policy_c.pyx":352
+  /* "hybrid_policy_c.pyx":367
  *     print("----------------------------------------------------")
  *     print(f"number of ARIMA / IT dist / keep alive scenario: {simulator.scenario_stats[0]/n*100:.2f}% / {simulator.scenario_stats[1]/n*100:.2f}% / {simulator.scenario_stats[2]/n*100:.2f}%")
  *     print("number of cold start: {}".format(cold_start_total))             # <<<<<<<<<<<<<<
  *     print("number of warm start: {}".format(warm_start_total))
  *     print("cold start rate: {}".format(cold_start_total/(cold_start_total + warm_start_total)))
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_number_of_cold_start, __pyx_n_s_format); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 352, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = NULL;
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_number_of_cold_start_2, __pyx_n_s_format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 367, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
+  __pyx_t_4 = NULL;
   __pyx_t_6 = 0;
   #if CYTHON_UNPACK_METHODS
-  if (likely(PyMethod_Check(__pyx_t_4))) {
-    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_4);
-    if (likely(__pyx_t_5)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-      __Pyx_INCREF(__pyx_t_5);
+  if (likely(PyMethod_Check(__pyx_t_1))) {
+    __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_1);
+    if (likely(__pyx_t_4)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
+      __Pyx_INCREF(__pyx_t_4);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_4, function);
+      __Pyx_DECREF_SET(__pyx_t_1, function);
       __pyx_t_6 = 1;
     }
   }
   #endif
   {
-    PyObject *__pyx_callargs[2] = {__pyx_t_5, __pyx_v_cold_start_total};
-    __pyx_t_7 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
-    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 352, __pyx_L1_error)
+    PyObject *__pyx_callargs[2] = {__pyx_t_4, __pyx_v_cold_start_total};
+    __pyx_t_7 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
+    __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 367, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
-  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 352, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 367, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "hybrid_policy_c.pyx":353
+  /* "hybrid_policy_c.pyx":368
  *     print(f"number of ARIMA / IT dist / keep alive scenario: {simulator.scenario_stats[0]/n*100:.2f}% / {simulator.scenario_stats[1]/n*100:.2f}% / {simulator.scenario_stats[2]/n*100:.2f}%")
  *     print("number of cold start: {}".format(cold_start_total))
  *     print("number of warm start: {}".format(warm_start_total))             # <<<<<<<<<<<<<<
  *     print("cold start rate: {}".format(cold_start_total/(cold_start_total + warm_start_total)))
  *     print("Maximum memory usage: {}".format(simulator.max_memory))
  */
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_number_of_warm_start, __pyx_n_s_format); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 353, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_number_of_warm_start_2, __pyx_n_s_format); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 368, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_5 = NULL;
+  __pyx_t_4 = NULL;
   __pyx_t_6 = 0;
   #if CYTHON_UNPACK_METHODS
   if (likely(PyMethod_Check(__pyx_t_7))) {
-    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_7);
-    if (likely(__pyx_t_5)) {
+    __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_7);
+    if (likely(__pyx_t_4)) {
       PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_7);
-      __Pyx_INCREF(__pyx_t_5);
+      __Pyx_INCREF(__pyx_t_4);
       __Pyx_INCREF(function);
       __Pyx_DECREF_SET(__pyx_t_7, function);
       __pyx_t_6 = 1;
@@ -11540,79 +11753,79 @@ static PyObject *__pyx_pf_15hybrid_policy_c_2main(CYTHON_UNUSED PyObject *__pyx_
   }
   #endif
   {
-    PyObject *__pyx_callargs[2] = {__pyx_t_5, __pyx_v_warm_start_total};
-    __pyx_t_4 = __Pyx_PyObject_FastCall(__pyx_t_7, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
-    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 353, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
+    PyObject *__pyx_callargs[2] = {__pyx_t_4, __pyx_v_warm_start_total};
+    __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_7, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
+    __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 368, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 353, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 368, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "hybrid_policy_c.pyx":354
+  /* "hybrid_policy_c.pyx":369
  *     print("number of cold start: {}".format(cold_start_total))
  *     print("number of warm start: {}".format(warm_start_total))
  *     print("cold start rate: {}".format(cold_start_total/(cold_start_total + warm_start_total)))             # <<<<<<<<<<<<<<
  *     print("Maximum memory usage: {}".format(simulator.max_memory))
  *     print("memory waste time: {}".format(simulator.wasted_memory_time))
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_cold_start_rate, __pyx_n_s_format); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 354, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_5 = PyNumber_Add(__pyx_v_cold_start_total, __pyx_v_warm_start_total); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 354, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_5);
-  __pyx_t_1 = __Pyx_PyNumber_Divide(__pyx_v_cold_start_total, __pyx_t_5); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 354, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_cold_start_rate_2, __pyx_n_s_format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 369, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
-  __pyx_t_5 = NULL;
+  __pyx_t_4 = PyNumber_Add(__pyx_v_cold_start_total, __pyx_v_warm_start_total); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 369, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_5 = __Pyx_PyNumber_Divide(__pyx_v_cold_start_total, __pyx_t_4); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 369, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __pyx_t_4 = NULL;
   __pyx_t_6 = 0;
   #if CYTHON_UNPACK_METHODS
-  if (likely(PyMethod_Check(__pyx_t_4))) {
-    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_4);
-    if (likely(__pyx_t_5)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-      __Pyx_INCREF(__pyx_t_5);
+  if (likely(PyMethod_Check(__pyx_t_1))) {
+    __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_1);
+    if (likely(__pyx_t_4)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
+      __Pyx_INCREF(__pyx_t_4);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_4, function);
+      __Pyx_DECREF_SET(__pyx_t_1, function);
       __pyx_t_6 = 1;
     }
   }
   #endif
   {
-    PyObject *__pyx_callargs[2] = {__pyx_t_5, __pyx_t_1};
-    __pyx_t_7 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
-    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 354, __pyx_L1_error)
+    PyObject *__pyx_callargs[2] = {__pyx_t_4, __pyx_t_5};
+    __pyx_t_7 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
+    __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 369, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
-  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 354, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 369, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "hybrid_policy_c.pyx":355
+  /* "hybrid_policy_c.pyx":370
  *     print("number of warm start: {}".format(warm_start_total))
  *     print("cold start rate: {}".format(cold_start_total/(cold_start_total + warm_start_total)))
  *     print("Maximum memory usage: {}".format(simulator.max_memory))             # <<<<<<<<<<<<<<
  *     print("memory waste time: {}".format(simulator.wasted_memory_time))
  *     print("Simulation time: {}".format(simulator.simulation_time))
  */
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Maximum_memory_usage, __pyx_n_s_format); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 355, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Maximum_memory_usage_2, __pyx_n_s_format); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 370, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_simulator, __pyx_n_s_max_memory); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 355, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = NULL;
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_simulator, __pyx_n_s_max_memory); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 370, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_4 = NULL;
   __pyx_t_6 = 0;
   #if CYTHON_UNPACK_METHODS
   if (likely(PyMethod_Check(__pyx_t_7))) {
-    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_7);
-    if (likely(__pyx_t_5)) {
+    __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_7);
+    if (likely(__pyx_t_4)) {
       PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_7);
-      __Pyx_INCREF(__pyx_t_5);
+      __Pyx_INCREF(__pyx_t_4);
       __Pyx_INCREF(function);
       __Pyx_DECREF_SET(__pyx_t_7, function);
       __pyx_t_6 = 1;
@@ -11620,77 +11833,77 @@ static PyObject *__pyx_pf_15hybrid_policy_c_2main(CYTHON_UNUSED PyObject *__pyx_
   }
   #endif
   {
-    PyObject *__pyx_callargs[2] = {__pyx_t_5, __pyx_t_1};
-    __pyx_t_4 = __Pyx_PyObject_FastCall(__pyx_t_7, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
-    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 355, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
+    PyObject *__pyx_callargs[2] = {__pyx_t_4, __pyx_t_5};
+    __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_7, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
+    __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 370, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 355, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 370, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "hybrid_policy_c.pyx":356
+  /* "hybrid_policy_c.pyx":371
  *     print("cold start rate: {}".format(cold_start_total/(cold_start_total + warm_start_total)))
  *     print("Maximum memory usage: {}".format(simulator.max_memory))
  *     print("memory waste time: {}".format(simulator.wasted_memory_time))             # <<<<<<<<<<<<<<
  *     print("Simulation time: {}".format(simulator.simulation_time))
  *     print("----------------------------------------------------")
  */
-  __pyx_t_4 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_memory_waste_time, __pyx_n_s_format); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 356, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_simulator, __pyx_n_s_wasted_memory_time); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 356, __pyx_L1_error)
+  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_memory_waste_time_2, __pyx_n_s_format); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 371, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = NULL;
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_simulator, __pyx_n_s_wasted_memory_time); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 371, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_4 = NULL;
   __pyx_t_6 = 0;
   #if CYTHON_UNPACK_METHODS
-  if (likely(PyMethod_Check(__pyx_t_4))) {
-    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_4);
-    if (likely(__pyx_t_5)) {
-      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_4);
-      __Pyx_INCREF(__pyx_t_5);
+  if (likely(PyMethod_Check(__pyx_t_1))) {
+    __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_1);
+    if (likely(__pyx_t_4)) {
+      PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_1);
+      __Pyx_INCREF(__pyx_t_4);
       __Pyx_INCREF(function);
-      __Pyx_DECREF_SET(__pyx_t_4, function);
+      __Pyx_DECREF_SET(__pyx_t_1, function);
       __pyx_t_6 = 1;
     }
   }
   #endif
   {
-    PyObject *__pyx_callargs[2] = {__pyx_t_5, __pyx_t_1};
-    __pyx_t_7 = __Pyx_PyObject_FastCall(__pyx_t_4, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
-    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 356, __pyx_L1_error)
+    PyObject *__pyx_callargs[2] = {__pyx_t_4, __pyx_t_5};
+    __pyx_t_7 = __Pyx_PyObject_FastCall(__pyx_t_1, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
+    __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 371, __pyx_L1_error)
     __Pyx_GOTREF(__pyx_t_7);
-    __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   }
-  __pyx_t_4 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_7); if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 356, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_4);
+  __pyx_t_1 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_7); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 371, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_1);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
 
-  /* "hybrid_policy_c.pyx":357
+  /* "hybrid_policy_c.pyx":372
  *     print("Maximum memory usage: {}".format(simulator.max_memory))
  *     print("memory waste time: {}".format(simulator.wasted_memory_time))
  *     print("Simulation time: {}".format(simulator.simulation_time))             # <<<<<<<<<<<<<<
  *     print("----------------------------------------------------")
  * 
  */
-  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Simulation_time, __pyx_n_s_format); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 357, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_GetAttrStr(__pyx_kp_s_Simulation_time_2, __pyx_n_s_format); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 372, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __pyx_t_1 = __Pyx_PyObject_GetAttrStr(__pyx_v_simulator, __pyx_n_s_simulation_time); if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 357, __pyx_L1_error)
-  __Pyx_GOTREF(__pyx_t_1);
-  __pyx_t_5 = NULL;
+  __pyx_t_5 = __Pyx_PyObject_GetAttrStr(__pyx_v_simulator, __pyx_n_s_simulation_time); if (unlikely(!__pyx_t_5)) __PYX_ERR(0, 372, __pyx_L1_error)
+  __Pyx_GOTREF(__pyx_t_5);
+  __pyx_t_4 = NULL;
   __pyx_t_6 = 0;
   #if CYTHON_UNPACK_METHODS
   if (likely(PyMethod_Check(__pyx_t_7))) {
-    __pyx_t_5 = PyMethod_GET_SELF(__pyx_t_7);
-    if (likely(__pyx_t_5)) {
+    __pyx_t_4 = PyMethod_GET_SELF(__pyx_t_7);
+    if (likely(__pyx_t_4)) {
       PyObject* function = PyMethod_GET_FUNCTION(__pyx_t_7);
-      __Pyx_INCREF(__pyx_t_5);
+      __Pyx_INCREF(__pyx_t_4);
       __Pyx_INCREF(function);
       __Pyx_DECREF_SET(__pyx_t_7, function);
       __pyx_t_6 = 1;
@@ -11698,27 +11911,27 @@ static PyObject *__pyx_pf_15hybrid_policy_c_2main(CYTHON_UNUSED PyObject *__pyx_
   }
   #endif
   {
-    PyObject *__pyx_callargs[2] = {__pyx_t_5, __pyx_t_1};
-    __pyx_t_4 = __Pyx_PyObject_FastCall(__pyx_t_7, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
-    __Pyx_XDECREF(__pyx_t_5); __pyx_t_5 = 0;
-    __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
-    if (unlikely(!__pyx_t_4)) __PYX_ERR(0, 357, __pyx_L1_error)
-    __Pyx_GOTREF(__pyx_t_4);
+    PyObject *__pyx_callargs[2] = {__pyx_t_4, __pyx_t_5};
+    __pyx_t_1 = __Pyx_PyObject_FastCall(__pyx_t_7, __pyx_callargs+1-__pyx_t_6, 1+__pyx_t_6);
+    __Pyx_XDECREF(__pyx_t_4); __pyx_t_4 = 0;
+    __Pyx_DECREF(__pyx_t_5); __pyx_t_5 = 0;
+    if (unlikely(!__pyx_t_1)) __PYX_ERR(0, 372, __pyx_L1_error)
+    __Pyx_GOTREF(__pyx_t_1);
     __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
   }
-  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_4); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 357, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_CallOneArg(__pyx_builtin_print, __pyx_t_1); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 372, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
-  __Pyx_DECREF(__pyx_t_4); __pyx_t_4 = 0;
+  __Pyx_DECREF(__pyx_t_1); __pyx_t_1 = 0;
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-  /* "hybrid_policy_c.pyx":358
+  /* "hybrid_policy_c.pyx":373
  *     print("memory waste time: {}".format(simulator.wasted_memory_time))
  *     print("Simulation time: {}".format(simulator.simulation_time))
  *     print("----------------------------------------------------")             # <<<<<<<<<<<<<<
  * 
  * 
  */
-  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__16, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 358, __pyx_L1_error)
+  __pyx_t_7 = __Pyx_PyObject_Call(__pyx_builtin_print, __pyx_tuple__16, NULL); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 373, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_7);
   __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
@@ -11754,6 +11967,7 @@ static PyObject *__pyx_pf_15hybrid_policy_c_2main(CYTHON_UNUSED PyObject *__pyx_
   __Pyx_XDECREF(__pyx_v_app_id_str);
   __Pyx_XDECREF(__pyx_v_cold_start);
   __Pyx_XDECREF(__pyx_v_warm_start);
+  __Pyx_XDECREF(__pyx_v_result);
   __Pyx_XGIVEREF(__pyx_r);
   __Pyx_RefNannyFinishContext();
   return __pyx_r;
@@ -11777,6 +11991,8 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
   __Pyx_StringTabEntry __pyx_string_tab[] = {
     {&__pyx_kp_s_, __pyx_k_, sizeof(__pyx_k_), 0, 0, 1, 0},
     {&__pyx_kp_u_2f, __pyx_k_2f, sizeof(__pyx_k_2f), 0, 1, 0, 0},
+    {&__pyx_n_s_ARIMA, __pyx_k_ARIMA, sizeof(__pyx_k_ARIMA), 0, 0, 1, 1},
+    {&__pyx_n_s_ARIMA_IT_dist_keep_alive_scenari, __pyx_k_ARIMA_IT_dist_keep_alive_scenari, sizeof(__pyx_k_ARIMA_IT_dist_keep_alive_scenari), 0, 0, 1, 1},
     {&__pyx_kp_u_ARIMA_preficted_next_IT, __pyx_k_ARIMA_preficted_next_IT, sizeof(__pyx_k_ARIMA_preficted_next_IT), 0, 1, 0, 0},
     {&__pyx_n_s_Application, __pyx_k_Application, sizeof(__pyx_k_Application), 0, 0, 1, 1},
     {&__pyx_kp_s_Enter_ARIMA_Branch, __pyx_k_Enter_ARIMA_Branch, sizeof(__pyx_k_Enter_ARIMA_Branch), 0, 0, 1, 0},
@@ -11787,11 +12003,14 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_kp_u_HashApp, __pyx_k_HashApp, sizeof(__pyx_k_HashApp), 0, 1, 0, 0},
     {&__pyx_kp_u_HashFunction, __pyx_k_HashFunction, sizeof(__pyx_k_HashFunction), 0, 1, 0, 0},
     {&__pyx_n_s_IT_behavior_change, __pyx_k_IT_behavior_change, sizeof(__pyx_k_IT_behavior_change), 0, 0, 1, 1},
-    {&__pyx_kp_s_Maximum_memory_usage, __pyx_k_Maximum_memory_usage, sizeof(__pyx_k_Maximum_memory_usage), 0, 0, 1, 0},
+    {&__pyx_n_s_IT_dist, __pyx_k_IT_dist, sizeof(__pyx_k_IT_dist), 0, 0, 1, 1},
+    {&__pyx_n_s_Maximum_memory_usage, __pyx_k_Maximum_memory_usage, sizeof(__pyx_k_Maximum_memory_usage), 0, 0, 1, 1},
+    {&__pyx_kp_s_Maximum_memory_usage_2, __pyx_k_Maximum_memory_usage_2, sizeof(__pyx_k_Maximum_memory_usage_2), 0, 0, 1, 0},
     {&__pyx_n_s_OOB_apps, __pyx_k_OOB_apps, sizeof(__pyx_k_OOB_apps), 0, 0, 1, 1},
     {&__pyx_n_s_OOB_apps_list, __pyx_k_OOB_apps_list, sizeof(__pyx_k_OOB_apps_list), 0, 0, 1, 1},
     {&__pyx_n_s_OOB_duration, __pyx_k_OOB_duration, sizeof(__pyx_k_OOB_duration), 0, 0, 1, 1},
-    {&__pyx_kp_s_Simulation_time, __pyx_k_Simulation_time, sizeof(__pyx_k_Simulation_time), 0, 0, 1, 0},
+    {&__pyx_n_s_Simulation_time, __pyx_k_Simulation_time, sizeof(__pyx_k_Simulation_time), 0, 0, 1, 1},
+    {&__pyx_kp_s_Simulation_time_2, __pyx_k_Simulation_time_2, sizeof(__pyx_k_Simulation_time_2), 0, 0, 1, 0},
     {&__pyx_n_s_Simulator, __pyx_k_Simulator, sizeof(__pyx_k_Simulator), 0, 0, 1, 1},
     {&__pyx_n_s_Simulator___init, __pyx_k_Simulator___init, sizeof(__pyx_k_Simulator___init), 0, 0, 1, 1},
     {&__pyx_n_s_Simulator___init___locals_lambda, __pyx_k_Simulator___init___locals_lambda, sizeof(__pyx_k_Simulator___init___locals_lambda), 0, 0, 1, 1},
@@ -11833,7 +12052,8 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_kp_u_cold_start, __pyx_k_cold_start, sizeof(__pyx_k_cold_start), 0, 1, 0, 0},
     {&__pyx_n_s_cold_start_2, __pyx_k_cold_start_2, sizeof(__pyx_k_cold_start_2), 0, 0, 1, 1},
     {&__pyx_n_s_cold_start_list, __pyx_k_cold_start_list, sizeof(__pyx_k_cold_start_list), 0, 0, 1, 1},
-    {&__pyx_kp_s_cold_start_rate, __pyx_k_cold_start_rate, sizeof(__pyx_k_cold_start_rate), 0, 0, 1, 0},
+    {&__pyx_n_s_cold_start_rate, __pyx_k_cold_start_rate, sizeof(__pyx_k_cold_start_rate), 0, 0, 1, 1},
+    {&__pyx_kp_s_cold_start_rate_2, __pyx_k_cold_start_rate_2, sizeof(__pyx_k_cold_start_rate_2), 0, 0, 1, 0},
     {&__pyx_n_u_cold_start_rate_distribution, __pyx_k_cold_start_rate_distribution, sizeof(__pyx_k_cold_start_rate_distribution), 0, 1, 0, 1},
     {&__pyx_n_s_cold_start_rate_list, __pyx_k_cold_start_rate_list, sizeof(__pyx_k_cold_start_rate_list), 0, 0, 1, 1},
     {&__pyx_n_s_cold_start_total, __pyx_k_cold_start_total, sizeof(__pyx_k_cold_start_total), 0, 0, 1, 1},
@@ -11891,6 +12111,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_is_coroutine, __pyx_k_is_coroutine, sizeof(__pyx_k_is_coroutine), 0, 0, 1, 1},
     {&__pyx_kp_u_json, __pyx_k_json, sizeof(__pyx_k_json), 0, 1, 0, 0},
     {&__pyx_n_s_json_2, __pyx_k_json_2, sizeof(__pyx_k_json_2), 0, 0, 1, 1},
+    {&__pyx_n_s_keep_alive, __pyx_k_keep_alive, sizeof(__pyx_k_keep_alive), 0, 0, 1, 1},
     {&__pyx_kp_s_keep_alive_window, __pyx_k_keep_alive_window, sizeof(__pyx_k_keep_alive_window), 0, 0, 1, 0},
     {&__pyx_n_s_keep_alive_window_2, __pyx_k_keep_alive_window_2, sizeof(__pyx_k_keep_alive_window_2), 0, 0, 1, 1},
     {&__pyx_n_s_keep_live_time, __pyx_k_keep_live_time, sizeof(__pyx_k_keep_live_time), 0, 0, 1, 1},
@@ -11909,7 +12130,8 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_mean, __pyx_k_mean, sizeof(__pyx_k_mean), 0, 0, 1, 1},
     {&__pyx_n_s_mean_pre, __pyx_k_mean_pre, sizeof(__pyx_k_mean_pre), 0, 0, 1, 1},
     {&__pyx_n_s_mean_pre_pre, __pyx_k_mean_pre_pre, sizeof(__pyx_k_mean_pre_pre), 0, 0, 1, 1},
-    {&__pyx_kp_s_memory_waste_time, __pyx_k_memory_waste_time, sizeof(__pyx_k_memory_waste_time), 0, 0, 1, 0},
+    {&__pyx_n_s_memory_waste_time, __pyx_k_memory_waste_time, sizeof(__pyx_k_memory_waste_time), 0, 0, 1, 1},
+    {&__pyx_kp_s_memory_waste_time_2, __pyx_k_memory_waste_time_2, sizeof(__pyx_k_memory_waste_time_2), 0, 0, 1, 0},
     {&__pyx_n_s_metaclass, __pyx_k_metaclass, sizeof(__pyx_k_metaclass), 0, 0, 1, 1},
     {&__pyx_n_s_model_selection, __pyx_k_model_selection, sizeof(__pyx_k_model_selection), 0, 0, 1, 1},
     {&__pyx_n_s_module, __pyx_k_module, sizeof(__pyx_k_module), 0, 0, 1, 1},
@@ -11921,8 +12143,10 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_kp_u_npy, __pyx_k_npy, sizeof(__pyx_k_npy), 0, 1, 0, 0},
     {&__pyx_n_s_number, __pyx_k_number, sizeof(__pyx_k_number), 0, 0, 1, 1},
     {&__pyx_kp_u_number_of_ARIMA_IT_dist_keep_ali, __pyx_k_number_of_ARIMA_IT_dist_keep_ali, sizeof(__pyx_k_number_of_ARIMA_IT_dist_keep_ali), 0, 1, 0, 0},
-    {&__pyx_kp_s_number_of_cold_start, __pyx_k_number_of_cold_start, sizeof(__pyx_k_number_of_cold_start), 0, 0, 1, 0},
-    {&__pyx_kp_s_number_of_warm_start, __pyx_k_number_of_warm_start, sizeof(__pyx_k_number_of_warm_start), 0, 0, 1, 0},
+    {&__pyx_n_s_number_of_cold_start, __pyx_k_number_of_cold_start, sizeof(__pyx_k_number_of_cold_start), 0, 0, 1, 1},
+    {&__pyx_kp_s_number_of_cold_start_2, __pyx_k_number_of_cold_start_2, sizeof(__pyx_k_number_of_cold_start_2), 0, 0, 1, 0},
+    {&__pyx_n_s_number_of_warm_start, __pyx_k_number_of_warm_start, sizeof(__pyx_k_number_of_warm_start), 0, 0, 1, 1},
+    {&__pyx_kp_s_number_of_warm_start_2, __pyx_k_number_of_warm_start_2, sizeof(__pyx_k_number_of_warm_start_2), 0, 0, 1, 0},
     {&__pyx_n_s_numpy, __pyx_k_numpy, sizeof(__pyx_k_numpy), 0, 0, 1, 1},
     {&__pyx_n_s_object, __pyx_k_object, sizeof(__pyx_k_object), 0, 0, 1, 1},
     {&__pyx_n_s_open, __pyx_k_open, sizeof(__pyx_k_open), 0, 0, 1, 1},
@@ -11956,6 +12180,7 @@ static int __Pyx_CreateStringTabAndInitStrings(void) {
     {&__pyx_n_s_qualname, __pyx_k_qualname, sizeof(__pyx_k_qualname), 0, 0, 1, 1},
     {&__pyx_n_s_r, __pyx_k_r, sizeof(__pyx_k_r), 0, 0, 1, 1},
     {&__pyx_n_s_range, __pyx_k_range, sizeof(__pyx_k_range), 0, 0, 1, 1},
+    {&__pyx_n_s_result, __pyx_k_result, sizeof(__pyx_k_result), 0, 0, 1, 1},
     {&__pyx_n_s_round, __pyx_k_round, sizeof(__pyx_k_round), 0, 0, 1, 1},
     {&__pyx_n_s_save, __pyx_k_save, sizeof(__pyx_k_save), 0, 0, 1, 1},
     {&__pyx_n_s_scenario_stats, __pyx_k_scenario_stats, sizeof(__pyx_k_scenario_stats), 0, 0, 1, 1},
@@ -12108,14 +12333,14 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
   __Pyx_GOTREF(__pyx_tuple__11);
   __Pyx_GIVEREF(__pyx_tuple__11);
 
-  /* "hybrid_policy_c.pyx":350
+  /* "hybrid_policy_c.pyx":365
  * 
  *     print("\n")
  *     print("----------------------------------------------------")             # <<<<<<<<<<<<<<
  *     print(f"number of ARIMA / IT dist / keep alive scenario: {simulator.scenario_stats[0]/n*100:.2f}% / {simulator.scenario_stats[1]/n*100:.2f}% / {simulator.scenario_stats[2]/n*100:.2f}%")
  *     print("number of cold start: {}".format(cold_start_total))
  */
-  __pyx_tuple__16 = PyTuple_Pack(1, __pyx_kp_s__15); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 350, __pyx_L1_error)
+  __pyx_tuple__16 = PyTuple_Pack(1, __pyx_kp_s__15); if (unlikely(!__pyx_tuple__16)) __PYX_ERR(0, 365, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__16);
   __Pyx_GIVEREF(__pyx_tuple__16);
 
@@ -12213,18 +12438,18 @@ static CYTHON_SMALL_CODE int __Pyx_InitCachedConstants(void) {
  *     tf = open(f"app_dict_{kwargs['app']}.json", "r")
  *     dict = json.load(tf)
  */
-  __pyx_tuple__34 = PyTuple_Pack(14, __pyx_n_s_kwargs, __pyx_n_s_tf, __pyx_n_s_dict_2, __pyx_n_s_app_dict, __pyx_n_s_func_dict, __pyx_n_s_simulator, __pyx_n_s_n, __pyx_n_s_cold_start_total, __pyx_n_s_warm_start_total, __pyx_n_s_cold_start_rate_list, __pyx_n_s_app_id, __pyx_n_s_app_id_str, __pyx_n_s_cold_start_2, __pyx_n_s_warm_start_2); if (unlikely(!__pyx_tuple__34)) __PYX_ERR(0, 320, __pyx_L1_error)
+  __pyx_tuple__34 = PyTuple_Pack(15, __pyx_n_s_kwargs, __pyx_n_s_tf, __pyx_n_s_dict_2, __pyx_n_s_app_dict, __pyx_n_s_func_dict, __pyx_n_s_simulator, __pyx_n_s_n, __pyx_n_s_cold_start_total, __pyx_n_s_warm_start_total, __pyx_n_s_cold_start_rate_list, __pyx_n_s_app_id, __pyx_n_s_app_id_str, __pyx_n_s_cold_start_2, __pyx_n_s_warm_start_2, __pyx_n_s_result); if (unlikely(!__pyx_tuple__34)) __PYX_ERR(0, 320, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__34);
   __Pyx_GIVEREF(__pyx_tuple__34);
-  __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 14, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_hybrid_policy_c_pyx, __pyx_n_s_main_2, 320, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) __PYX_ERR(0, 320, __pyx_L1_error)
+  __pyx_codeobj__35 = (PyObject*)__Pyx_PyCode_New(0, 0, 0, 15, 0, CO_OPTIMIZED|CO_NEWLOCALS|CO_VARKEYWORDS, __pyx_empty_bytes, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_tuple__34, __pyx_empty_tuple, __pyx_empty_tuple, __pyx_kp_s_hybrid_policy_c_pyx, __pyx_n_s_main_2, 320, __pyx_empty_bytes); if (unlikely(!__pyx_codeobj__35)) __PYX_ERR(0, 320, __pyx_L1_error)
 
-  /* "hybrid_policy_c.pyx":376
+  /* "hybrid_policy_c.pyx":391
  *     # for pt1 in [0,1,5]:
  *     #     for pt2 in [99,95,90]:
  *     for window_period in [0.5,0.65,0.75,0.85,0.9]:             # <<<<<<<<<<<<<<
- *         main(app=10,pt1=5,pt2=95,window_period=window_period)
+ *         main(app=5,pt1=5,pt2=95,window_period=window_period)
  */
-  __pyx_tuple__36 = PyTuple_Pack(5, __pyx_float_0_5, __pyx_float_0_65, __pyx_float_0_75, __pyx_float_0_85, __pyx_float_0_9); if (unlikely(!__pyx_tuple__36)) __PYX_ERR(0, 376, __pyx_L1_error)
+  __pyx_tuple__36 = PyTuple_Pack(5, __pyx_float_0_5, __pyx_float_0_65, __pyx_float_0_75, __pyx_float_0_85, __pyx_float_0_9); if (unlikely(!__pyx_tuple__36)) __PYX_ERR(0, 391, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_tuple__36);
   __Pyx_GIVEREF(__pyx_tuple__36);
   __Pyx_RefNannyFinishContext();
@@ -12964,70 +13189,70 @@ if (!__Pyx_RefNanny) {
   if (PyDict_SetItem(__pyx_d, __pyx_n_s_main_2, __pyx_t_2) < 0) __PYX_ERR(0, 320, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-  /* "hybrid_policy_c.pyx":361
+  /* "hybrid_policy_c.pyx":376
  * 
  * 
  * if __name__ == "__main__":             # <<<<<<<<<<<<<<
  * 
  *     # function_id, app_id, start_time, trigger, function_duration, function_memory
  */
-  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_name); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 361, __pyx_L1_error)
+  __Pyx_GetModuleGlobalName(__pyx_t_2, __pyx_n_s_name); if (unlikely(!__pyx_t_2)) __PYX_ERR(0, 376, __pyx_L1_error)
   __Pyx_GOTREF(__pyx_t_2);
-  __pyx_t_4 = (__Pyx_PyString_Equals(__pyx_t_2, __pyx_n_s_main, Py_EQ)); if (unlikely((__pyx_t_4 < 0))) __PYX_ERR(0, 361, __pyx_L1_error)
+  __pyx_t_4 = (__Pyx_PyString_Equals(__pyx_t_2, __pyx_n_s_main, Py_EQ)); if (unlikely((__pyx_t_4 < 0))) __PYX_ERR(0, 376, __pyx_L1_error)
   __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
   if (__pyx_t_4) {
 
-    /* "hybrid_policy_c.pyx":376
+    /* "hybrid_policy_c.pyx":391
  *     # for pt1 in [0,1,5]:
  *     #     for pt2 in [99,95,90]:
  *     for window_period in [0.5,0.65,0.75,0.85,0.9]:             # <<<<<<<<<<<<<<
- *         main(app=10,pt1=5,pt2=95,window_period=window_period)
+ *         main(app=5,pt1=5,pt2=95,window_period=window_period)
  */
     __pyx_t_2 = __pyx_tuple__36; __Pyx_INCREF(__pyx_t_2);
     __pyx_t_5 = 0;
     for (;;) {
       if (__pyx_t_5 >= 5) break;
       #if CYTHON_ASSUME_SAFE_MACROS && !CYTHON_AVOID_BORROWED_REFS
-      __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_3); __pyx_t_5++; if (unlikely((0 < 0))) __PYX_ERR(0, 376, __pyx_L1_error)
+      __pyx_t_3 = PyTuple_GET_ITEM(__pyx_t_2, __pyx_t_5); __Pyx_INCREF(__pyx_t_3); __pyx_t_5++; if (unlikely((0 < 0))) __PYX_ERR(0, 391, __pyx_L1_error)
       #else
-      __pyx_t_3 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 376, __pyx_L1_error)
+      __pyx_t_3 = __Pyx_PySequence_ITEM(__pyx_t_2, __pyx_t_5); __pyx_t_5++; if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 391, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
       #endif
-      if (PyDict_SetItem(__pyx_d, __pyx_n_s_window_period, __pyx_t_3) < 0) __PYX_ERR(0, 376, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_d, __pyx_n_s_window_period, __pyx_t_3) < 0) __PYX_ERR(0, 391, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
 
-      /* "hybrid_policy_c.pyx":377
+      /* "hybrid_policy_c.pyx":392
  *     #     for pt2 in [99,95,90]:
  *     for window_period in [0.5,0.65,0.75,0.85,0.9]:
- *         main(app=10,pt1=5,pt2=95,window_period=window_period)             # <<<<<<<<<<<<<<
+ *         main(app=5,pt1=5,pt2=95,window_period=window_period)             # <<<<<<<<<<<<<<
  */
-      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_main_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 377, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_3, __pyx_n_s_main_2); if (unlikely(!__pyx_t_3)) __PYX_ERR(0, 392, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_3);
-      __pyx_t_6 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 377, __pyx_L1_error)
+      __pyx_t_6 = __Pyx_PyDict_NewPresized(4); if (unlikely(!__pyx_t_6)) __PYX_ERR(0, 392, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_6);
-      if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_app, __pyx_int_10) < 0) __PYX_ERR(0, 377, __pyx_L1_error)
-      if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_pt1, __pyx_int_5) < 0) __PYX_ERR(0, 377, __pyx_L1_error)
-      if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_pt2, __pyx_int_95) < 0) __PYX_ERR(0, 377, __pyx_L1_error)
-      __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_window_period); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 377, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_app, __pyx_int_5) < 0) __PYX_ERR(0, 392, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_pt1, __pyx_int_5) < 0) __PYX_ERR(0, 392, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_pt2, __pyx_int_95) < 0) __PYX_ERR(0, 392, __pyx_L1_error)
+      __Pyx_GetModuleGlobalName(__pyx_t_7, __pyx_n_s_window_period); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 392, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
-      if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_window_period, __pyx_t_7) < 0) __PYX_ERR(0, 377, __pyx_L1_error)
+      if (PyDict_SetItem(__pyx_t_6, __pyx_n_s_window_period, __pyx_t_7) < 0) __PYX_ERR(0, 392, __pyx_L1_error)
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
-      __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_empty_tuple, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 377, __pyx_L1_error)
+      __pyx_t_7 = __Pyx_PyObject_Call(__pyx_t_3, __pyx_empty_tuple, __pyx_t_6); if (unlikely(!__pyx_t_7)) __PYX_ERR(0, 392, __pyx_L1_error)
       __Pyx_GOTREF(__pyx_t_7);
       __Pyx_DECREF(__pyx_t_3); __pyx_t_3 = 0;
       __Pyx_DECREF(__pyx_t_6); __pyx_t_6 = 0;
       __Pyx_DECREF(__pyx_t_7); __pyx_t_7 = 0;
 
-      /* "hybrid_policy_c.pyx":376
+      /* "hybrid_policy_c.pyx":391
  *     # for pt1 in [0,1,5]:
  *     #     for pt2 in [99,95,90]:
  *     for window_period in [0.5,0.65,0.75,0.85,0.9]:             # <<<<<<<<<<<<<<
- *         main(app=10,pt1=5,pt2=95,window_period=window_period)
+ *         main(app=5,pt1=5,pt2=95,window_period=window_period)
  */
     }
     __Pyx_DECREF(__pyx_t_2); __pyx_t_2 = 0;
 
-    /* "hybrid_policy_c.pyx":361
+    /* "hybrid_policy_c.pyx":376
  * 
  * 
  * if __name__ == "__main__":             # <<<<<<<<<<<<<<
