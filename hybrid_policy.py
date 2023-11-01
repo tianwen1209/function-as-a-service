@@ -324,7 +324,7 @@ def main(**kwargs):
     func_dict = dict[1]
     
     simulator = Simulator()
-    simulator.simulation_hybrid(kwargs['app'], app_dict, func_dict, verbose=False,total_days=12, pt1=kwargs['pt1'], pt2=kwargs['pt2'], window_period=kwargs['window_period'])
+    simulator.simulation_hybrid(kwargs['app'], app_dict, func_dict, verbose=False,total_days=12, pt1=kwargs['pt1'], pt2=kwargs['pt2'], window_period=kwargs['window_period'], pattern_min_len=kwargs['pattern_min_len'])
     n = sum(simulator.scenario_stats)
 
     cold_start_total = 0
@@ -389,4 +389,4 @@ if __name__ == "__main__":
     # for pt1 in [0,1,5]:
     #     for pt2 in [99,95,90]:
     for window_period in [0.5,0.65,0.75,0.85,0.9]:
-        main(app=5,pt1=5,pt2=95,window_period=window_period)
+        main(app=5,pt1=5,pt2=95,window_period=window_period, pattern_min_len=10)

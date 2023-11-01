@@ -179,7 +179,7 @@ class Generator:
         return result
                           
 if __name__ == "__main__":
-    for app in [200]:
+    for app in [100]:
         for i in range(1,13):
             tmp=Generator(i, data_root="./data/", total_app=app)
             function_list=tmp.gen()
