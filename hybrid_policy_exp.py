@@ -18,14 +18,14 @@ if __name__ == "__main__":
     # ]
             
     # EXP1
-    for window_period in [0.5,0.65,0.75,0.85,0.9]:
-        main(app=100,pt1=5,pt2=95,window_period=window_period)
+    # for window_period in [0.5,0.65,0.75,0.85,0.9]:
+    #     main(app=100,pt1=5,pt2=95,window_period=window_period)
         
-    # EXP2
-    for pt1 in [0,1,5]:
-        for pt2 in [90, 95, 99]:
-            main(app=100,pt1=pt1,pt2=pt2,window_period=0.85)
+    # # EXP2
+    # for pt1 in [0,1,5]:
+    #     for pt2 in [90, 95, 99]:
+    #         main(app=100,pt1=pt1,pt2=pt2,window_period=0.85)
             
     # EXP3 #TODO
-    for pattern_min_len in [0,2,5,10]:
-        main(app=100,pt1=5,pt2=95,window_period=0.85,pattern_min_len=pattern_min_len)
+    for IT_behavior_change in [0,2,5,10]:
+        main(app=200,pt1=5,pt2=95,window_period=0.85,IT_behavior_change=IT_behavior_change)

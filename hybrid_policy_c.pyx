@@ -324,7 +324,7 @@ def main(**kwargs):
     func_dict = dict[1]
     
     simulator = Simulator()
-    simulator.simulation_hybrid(kwargs['app'], app_dict, func_dict, verbose=False,total_days=12, pt1=kwargs['pt1'], pt2=kwargs['pt2'], window_period=kwargs['window_period'])
+    simulator.simulation_hybrid(kwargs['app'], app_dict, func_dict, verbose=False,total_days=12, pt1=kwargs['pt1'], pt2=kwargs['pt2'], window_period=kwargs['window_period'], IT_behavior_change=kwargs['IT_behavior_change'])
     n = sum(simulator.scenario_stats)
 
     cold_start_total = 0
@@ -358,7 +358,7 @@ def main(**kwargs):
         "cold_start_rate_list": cold_start_rate_list
     }
     # np.save(f"cold_start_rate_distribution_{kwargs['app']}_{kwargs['pt1']}_{kwargs['pt2']}_{kwargs['window_period']}.npy", cold_start_rate_list)
-    np.save(f"cold_start_rate_distribution_{kwargs['app']}_{kwargs['pt1']}_{kwargs['pt2']}_{kwargs['window_period']}.npy", result)
+    np.save(f"cold_start_rate_distribution_{kwargs['app']}_{kwargs['pt1']}_{kwargs['pt2']}_{kwargs['IT_behavior_change']}.npy", result)
 
 
     print("\n")
@@ -389,4 +389,4 @@ if __name__ == "__main__":
     # for pt1 in [0,1,5]:
     #     for pt2 in [99,95,90]:
     for window_period in [0.5,0.65,0.75,0.85,0.9]:
-        main(app=5,pt1=5,pt2=95,window_period=window_period)
+        main(app=5,pt1=5,pt2=95,window_period=window_period, pattern_min_len=10)
