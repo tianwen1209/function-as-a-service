@@ -168,5 +168,5 @@ if __name__ == "__main__":
                     axs[i,day].set_xlabel(f'day_{day+1}')
                 if day==0:
                     axs[i,day].set_ylabel(f'app_{app}')
-        plt.savefig(f'saved_figures/hist{j}.png')
+        plt.savefig(f'saved_figures/hist{j}.pdf')
         plt.close()
