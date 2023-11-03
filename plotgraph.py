@@ -40,4 +40,4 @@ if __name__ == "__main__":
     plt.xlabel("Functions per App")
     plt.ylabel("Cumulative Fraction")
     plt.legend()
-    plt.savefig('test.png')
+    plt.savefig('test.pdf')

@@ -35,7 +35,7 @@ if __name__ == "__main__":
     plt.xlabel("Allocated Memory (MB)")
     plt.ylabel("CDF")
     plt.legend()
-    plt.savefig('memory.png')
+    plt.savefig('memory.pdf')
     plt.close()
 
     data1=[min(App_duration_dict[key]) for key in App_duration_dict.keys()]   
@@ -48,6 +48,6 @@ if __name__ == "__main__":
     plt.xlabel("Time (s)")
     plt.ylabel("CDF")
     plt.legend()
-    plt.savefig('duration.png')
+    plt.savefig('duration.pdf')
 
 
